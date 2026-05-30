@@ -7,9 +7,9 @@ export const strings = {
     location: 'Tel Aviv–Yafo',
     tagline:
       "Order straight from Tel Aviv kitchens that keep their own drivers — no aggregators, no 27% commission, no Wolt.",
-    warningTitle: 'Starter data.',
+    warningTitle: 'For guidance only.',
     warningBody:
-      "Restaurant names are real; delivery radius, minimum order, fees and Wolt-status are illustrative placeholders. Verify each against the restaurant's live ordering page before trusting it.",
+      "Information on this site is community-maintained and may be incomplete or out of date. Hours, fees, and delivery areas change without notice — always confirm directly with the restaurant before ordering. Dietary tags are for general guidance only; never rely on them for allergy or medical decisions. Yashir makes no warranties regarding accuracy and accepts no liability for any decisions made based on this information.",
     openNow: 'Open Now',
     statsLabel: (count: number) => `${count} restaurants · No Wolt`,
     searchPlaceholder: 'Search restaurants…',
@@ -61,9 +61,9 @@ export const strings = {
     location: 'תל אביב–יפו',
     tagline:
       'הזמינו ישירות ממסעדות תל אביב שמשלחות בעצמן — ללא מתווכים, ללא 27% עמלה, ללא וולט.',
-    warningTitle: 'נתוני התחלה.',
+    warningTitle: 'למטרת הכוונה בלבד.',
     warningBody:
-      'שמות המסעדות אמיתיים; רדיוס משלוח, מינימום הזמנה, דמי משלוח וסטטוס וולט הם דוגמאות להמחשה. בדקו מול דף ההזמנה הרשמי לפני הסתמכות עליהם.',
+      'המידע באתר מתוחזק על ידי הקהילה ועשוי להיות חלקי או לא מעודכן. שעות, עמלות ואזורי משלוח משתנים ללא הודעה מוקדמת — אמתו תמיד ישירות מול המסעדה לפני הזמנה. תגיות תזונה הן להכוונה כללית בלבד; אל תסתמכו עליהן להחלטות רפואיות או בנוגע לאלרגיות. ישיר אינו מתחייב לדיוק המידע ואינו אחראי לכל החלטה שתתקבל על סמכו.',
     openNow: 'פתוח עכשיו',
     statsLabel: (count: number) => `${count} מסעדות · ללא וולט`,
     searchPlaceholder: 'חיפוש מסעדות…',
