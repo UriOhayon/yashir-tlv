@@ -83,6 +83,17 @@ export default function RestaurantCard({ restaurant: r, lang, t }: Props) {
           </div>
         )}
 
+        {/* Coupon code */}
+        {r.couponCode && (
+          <div
+            className="mt-2.5 flex items-start gap-1.5 rounded-lg px-2.5 py-1.5 text-[10px] leading-snug"
+            style={{ backgroundColor: "#fefce8", border: "1px solid #fde68a", color: "#92400e" }}
+          >
+            <span className="shrink-0">🏷️</span>
+            <span><strong>{lang === "he" ? "קוד קופון:" : "Coupon:"}</strong> {r.couponCode}</span>
+          </div>
+        )}
+
         {/* Hever badge */}
         {r.acceptsHever && (
           <span

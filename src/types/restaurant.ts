@@ -53,6 +53,7 @@ export interface Restaurant {
   phone?: string;
   acceptsHever?: boolean;
   deliveryUnconfirmed?: boolean;
+  couponCode?: string;
   lastVerified: string;
   notes?: string;
 }
