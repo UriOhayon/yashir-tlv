@@ -31,6 +31,8 @@ export const strings = {
     suggestTitle: 'Know a restaurant we missed?',
     suggestLink: 'Suggest one →',
     platformLabel: 'Orders via',
+    heverFilter: 'Hever Card',
+    heverBadge: 'Hever',
     cuisineLabels: {
       pizza: 'Pizza',
       asian: 'Asian',
@@ -39,6 +41,8 @@ export const strings = {
       'middle-eastern': 'Middle Eastern',
       vegan: 'Vegan',
       italian: 'Italian',
+      mexican: 'Mexican',
+      greek: 'Greek',
       other: 'Other',
     },
     dietaryLabels: {
@@ -85,6 +89,8 @@ export const strings = {
     suggestTitle: 'יודע על מסעדה שפספסנו?',
     suggestLink: 'הצע אחת ←',
     platformLabel: 'הזמנות דרך',
+    heverFilter: 'כרטיס חבר',
+    heverBadge: 'חבר',
     cuisineLabels: {
       pizza: 'פיצה',
       asian: 'אסייתי',
@@ -93,6 +99,8 @@ export const strings = {
       'middle-eastern': 'מזרח תיכוני',
       vegan: 'טבעוני',
       italian: 'איטלקי',
+      mexican: 'מקסיקני',
+      greek: 'יווני',
       other: 'אחר',
     },
     dietaryLabels: {

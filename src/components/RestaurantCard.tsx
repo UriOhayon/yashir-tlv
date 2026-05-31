@@ -83,6 +83,16 @@ export default function RestaurantCard({ restaurant: r, lang, t }: Props) {
           </div>
         )}
 
+        {/* Hever badge */}
+        {r.acceptsHever && (
+          <span
+            className="mt-2.5 inline-block rounded-full border px-2 py-0.5 text-xs font-semibold"
+            style={{ backgroundColor: "#e8f0fe", color: "#1a56db", borderColor: "#93c5fd" }}
+          >
+            ✦ {lang === "he" ? "כרטיס חבר" : "Hever Card"}
+          </span>
+        )}
+
         {/* Unconfirmed delivery warning */}
         {r.deliveryUnconfirmed && (
           <p className="mt-2.5 text-[10px] leading-snug" style={{ color: "#9c6b1a" }}>

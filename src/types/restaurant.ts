@@ -6,6 +6,8 @@ export type CuisineType =
   | 'middle-eastern'
   | 'vegan'
   | 'italian'
+  | 'mexican'
+  | 'greek'
   | 'other';
 
 export type DietaryTag =
@@ -18,8 +20,8 @@ export type DietaryTag =
 export type OrderingPlatform = 'tabit' | 'nibble' | 'proprietary' | 'phone-only';
 
 export interface DaySchedule {
-  open: string;  // "HH:MM" 24-hour
-  close: string; // "HH:MM" — if close < open, restaurant is open past midnight
+  open: string;
+  close: string;
 }
 
 export interface WeeklySchedule {
@@ -39,7 +41,7 @@ export interface Restaurant {
   cuisineType: CuisineType;
   address: string;
   neighborhood: string;
-  website?: string;  // omit for phone-only restaurants with no ordering site
+  website?: string;
   orderingPlatform: OrderingPlatform;
   deliveryRadiusKm: number;
   minOrderILS: number;
@@ -49,7 +51,8 @@ export interface Restaurant {
   schedule: WeeklySchedule;
   dietaryTags: DietaryTag[];
   phone?: string;
-  lastVerified: string;
+  acceptsHever?: boolean;
   deliveryUnconfirmed?: boolean;
+  lastVerified: string;
   notes?: string;
 }

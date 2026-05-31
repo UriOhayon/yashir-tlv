@@ -18,6 +18,7 @@ export default function Home() {
   const [cuisineFilter, setCuisineFilter] = useState<CuisineType | "all">("all");
   const [dietaryFilters, setDietaryFilters] = useState<DietaryTag[]>([]);
   const [openNow, setOpenNow] = useState(false);
+  const [heverFilter, setHeverFilter] = useState(false);
 
   const t = strings[lang];
 
@@ -35,9 +36,10 @@ export default function Home() {
       if (dietaryFilters.length > 0 && !dietaryFilters.every((d) => r.dietaryTags.includes(d)))
         return false;
       if (openNow && !isOpenNow(r.schedule)) return false;
+      if (heverFilter && !r.acceptsHever) return false;
       return true;
     });
-  }, [search, cuisineFilter, dietaryFilters, openNow]);
+  }, [search, cuisineFilter, dietaryFilters, openNow, heverFilter]);
 
   return (
     <div className="min-h-screen" style={{ backgroundColor: "var(--cream)" }} dir={lang === "he" ? "rtl" : "ltr"}>
@@ -134,6 +136,8 @@ export default function Home() {
             setCuisineFilter={setCuisineFilter}
             dietaryFilters={dietaryFilters}
             setDietaryFilters={setDietaryFilters}
+            heverFilter={heverFilter}
+            setHeverFilter={setHeverFilter}
             t={t}
           />
         </div>
