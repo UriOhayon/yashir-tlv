@@ -1,7 +1,7 @@
 import type { Restaurant } from "@/types/restaurant";
 
 // Data verified 2026-05-31. Ask Claude to update any entry.
-// Removed: Nanuchka (closed 2018), Pizza Reim (unverifiable), Leila Jaffa (unverifiable).
+// Removed: Thai House (Wolt-only), Biga (Wolt-only).
 export const restaurants: Restaurant[] = [
   {
     id: "dr-shakshuka",
@@ -10,7 +10,6 @@ export const restaurants: Restaurant[] = [
     cuisineType: "mediterranean",
     address: "Beit Eshel St 3, Jaffa",
     neighborhood: "Yafo",
-    // No independent ordering website — call to order
     orderingPlatform: "phone-only",
     deliveryRadiusKm: 5,
     minOrderILS: 90,
@@ -28,8 +27,9 @@ export const restaurants: Restaurant[] = [
     },
     dietaryTags: ["vegetarian-friendly"],
     phone: "03-682-2842",
+    deliveryUnconfirmed: true,
     lastVerified: "2026-05-31",
-    notes: "Jaffa institution since 1991. Shakshuka, mezze, North African dishes. Order by phone.",
+    notes: "Jaffa institution since 1991. Call to confirm delivery is available.",
   },
   {
     id: "anastasia",
@@ -38,8 +38,8 @@ export const restaurants: Restaurant[] = [
     cuisineType: "vegan",
     address: "Frishman St 54, Tel Aviv",
     neighborhood: "Lev Hair",
-    website: "https://www.anastasiatlv.co.il",
-    orderingPlatform: "tabit",
+    website: "https://www.anastasiatlv.co.il/online-ordering",
+    orderingPlatform: "proprietary",
     deliveryRadiusKm: 4,
     minOrderILS: 60,
     deliveryFeeILS: 12,
@@ -57,35 +57,7 @@ export const restaurants: Restaurant[] = [
     dietaryTags: ["vegan", "gluten-free", "vegetarian-friendly"],
     phone: "03-529-0095",
     lastVerified: "2026-05-31",
-    notes: "100% plant-based café. Famous for raw desserts and smoothie bowls.",
-  },
-  {
-    id: "thai-house",
-    name: "Thai House",
-    nameHe: "תאי האוס",
-    cuisineType: "asian",
-    address: "Bograshov St 8, Tel Aviv",
-    neighborhood: "Bograshov",
-    website: "https://www.thai-house.co.il",
-    orderingPlatform: "proprietary",
-    deliveryRadiusKm: 6,
-    minOrderILS: 80,
-    deliveryFeeILS: 15,
-    estimatedDeliveryMin: 40,
-    operatingHours: "Sun–Thu 12:00–23:00, Fri 12:00–15:00, Sat 19:00–23:00",
-    schedule: {
-      sun: { open: "12:00", close: "23:00" },
-      mon: { open: "12:00", close: "23:00" },
-      tue: { open: "12:00", close: "23:00" },
-      wed: { open: "12:00", close: "23:00" },
-      thu: { open: "12:00", close: "23:00" },
-      fri: { open: "12:00", close: "15:00" },
-      sat: { open: "19:00", close: "23:00" },
-    },
-    dietaryTags: ["vegetarian-friendly"],
-    phone: "03-517-8568",
-    lastVerified: "2026-05-31",
-    notes: "Tel Aviv's longest-running Thai restaurant, open since 1996. Pad Thai, curries, wok dishes.",
+    notes: "100% plant-based café. Own website ordering confirmed.",
   },
   {
     id: "moses",
@@ -100,7 +72,7 @@ export const restaurants: Restaurant[] = [
     minOrderILS: 70,
     deliveryFeeILS: 10,
     estimatedDeliveryMin: 35,
-    operatingHours: "Sun–Wed 12:00–02:00, Thu 12:00–04:00, Fri 12:00–04:00, Sat 12:00–02:00",
+    operatingHours: "Sun–Wed 12:00–02:00, Thu–Fri 12:00–04:00, Sat 12:00–02:00",
     schedule: {
       sun: { open: "12:00", close: "02:00" },
       mon: { open: "12:00", close: "02:00" },
@@ -111,9 +83,9 @@ export const restaurants: Restaurant[] = [
       sat: { open: "12:00", close: "02:00" },
     },
     dietaryTags: ["vegetarian-friendly"],
-    phone: "03-696-2525",
+    phone: "077-9800470",
     lastVerified: "2026-05-31",
-    notes: "Israeli burger institution. Smash burgers, craft beer, own delivery fleet.",
+    notes: "Israeli burger institution. Own delivery via moses-shop.com.",
   },
   {
     id: "bbb-burgus",
@@ -141,35 +113,7 @@ export const restaurants: Restaurant[] = [
     dietaryTags: ["vegetarian-friendly"],
     phone: "03-624-0444",
     lastVerified: "2026-05-31",
-    notes: "One of Israel's largest burger chains. Own ordering site at burgus.co.il.",
-  },
-  {
-    id: "biga",
-    name: "Biga",
-    nameHe: "ביגה",
-    cuisineType: "pizza",
-    address: "Eliezer Kaplan St 26, Tel Aviv",
-    neighborhood: "HaKirya",
-    website: "https://biga-bakery.co.il",
-    orderingPlatform: "proprietary",
-    deliveryRadiusKm: 5,
-    minOrderILS: 75,
-    deliveryFeeILS: 15,
-    estimatedDeliveryMin: 40,
-    operatingHours: "Sun–Thu 12:00–23:00, Fri 12:00–15:00, Sat 20:00–23:00",
-    schedule: {
-      sun: { open: "12:00", close: "23:00" },
-      mon: { open: "12:00", close: "23:00" },
-      tue: { open: "12:00", close: "23:00" },
-      wed: { open: "12:00", close: "23:00" },
-      thu: { open: "12:00", close: "23:00" },
-      fri: { open: "12:00", close: "15:00" },
-      sat: { open: "20:00", close: "23:00" },
-    },
-    dietaryTags: ["vegetarian-friendly", "kosher"],
-    phone: "03-691-6636",
-    lastVerified: "2026-05-31",
-    notes: "Artisan sourdough pizza, kosher. Italian-trained bakers, wood-fired oven.",
+    notes: "Large Israeli chain. Own ordering at burgus.co.il.",
   },
   {
     id: "dominos-israel",
@@ -197,7 +141,7 @@ export const restaurants: Restaurant[] = [
     dietaryTags: ["vegetarian-friendly", "kosher"],
     phone: "*6767",
     lastVerified: "2026-05-31",
-    notes: "Free delivery on qualifying orders. Real-time GPS tracking via own app.",
+    notes: "Free delivery on qualifying orders. GPS tracking via own app.",
   },
   {
     id: "abu-adham",
@@ -206,7 +150,6 @@ export const restaurants: Restaurant[] = [
     cuisineType: "middle-eastern",
     address: "Yefet St 51, Jaffa",
     neighborhood: "Yafo",
-    // No independent ordering website — call to order
     orderingPlatform: "phone-only",
     deliveryRadiusKm: 4,
     minOrderILS: 50,
@@ -224,8 +167,9 @@ export const restaurants: Restaurant[] = [
     },
     dietaryTags: ["vegan", "vegetarian-friendly", "halal"],
     phone: "03-681-8354",
+    deliveryUnconfirmed: true,
     lastVerified: "2026-05-31",
-    notes: "Legendary Jaffa hummus spot. Call to order; cash on delivery accepted.",
+    notes: "Legendary Jaffa hummus. Call to confirm delivery is available.",
   },
   {
     id: "meshek-barzilay",
@@ -234,7 +178,7 @@ export const restaurants: Restaurant[] = [
     cuisineType: "vegan",
     address: "Ahad Ha'am St 6, Tel Aviv",
     neighborhood: "Neve Tzedek",
-    website: "https://www.meshekbarzilay.co.il",
+    website: "https://shop.meshekbarzilay.co.il/shop/",
     orderingPlatform: "proprietary",
     deliveryRadiusKm: 4,
     minOrderILS: 90,
@@ -253,7 +197,7 @@ export const restaurants: Restaurant[] = [
     dietaryTags: ["vegan", "gluten-free", "vegetarian-friendly"],
     phone: "03-516-6329",
     lastVerified: "2026-05-31",
-    notes: "Organic, farm-to-table vegan kitchen in Neve Tzedek. Seasonal menu.",
+    notes: "Organic vegan kitchen. Own shop delivery confirmed at shop.meshekbarzilay.co.il.",
   },
   {
     id: "hakosem",
@@ -262,7 +206,6 @@ export const restaurants: Restaurant[] = [
     cuisineType: "middle-eastern",
     address: "Shlomo HaMelech St 1, Tel Aviv",
     neighborhood: "Ibn Gabirol",
-    // No independent ordering website — call to order
     orderingPlatform: "phone-only",
     deliveryRadiusKm: 4,
     minOrderILS: 60,
@@ -280,8 +223,9 @@ export const restaurants: Restaurant[] = [
     },
     dietaryTags: ["halal", "vegetarian-friendly"],
     phone: "03-525-7626",
+    deliveryUnconfirmed: true,
     lastVerified: "2026-05-31",
-    notes: "Iconic falafel & shawarma since 2001. Own scooter delivery. Call to order.",
+    notes: "Iconic falafel since 2001. Call to confirm delivery availability.",
   },
   {
     id: "abu-hassan",
@@ -290,7 +234,6 @@ export const restaurants: Restaurant[] = [
     cuisineType: "middle-eastern",
     address: "HaDolphin St 1, Jaffa",
     neighborhood: "Yafo",
-    // No independent ordering website — call to order
     orderingPlatform: "phone-only",
     deliveryRadiusKm: 4,
     minOrderILS: 50,
@@ -308,8 +251,8 @@ export const restaurants: Restaurant[] = [
     },
     dietaryTags: ["vegan", "vegetarian-friendly", "halal"],
     phone: "03-682-0387",
+    deliveryUnconfirmed: true,
     lastVerified: "2026-05-31",
-    notes: "The most famous hummus in Israel. Call to order; arrives warm. Often sells out by noon.",
+    notes: "Most famous hummus in Israel. Often sold out by noon. Call to confirm delivery.",
   },
 ];
-// Taizu removed: their delivery arm "Cafe Taizu" operates exclusively via Wolt, with no independent ordering.

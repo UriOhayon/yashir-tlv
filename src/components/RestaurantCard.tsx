@@ -82,6 +82,13 @@ export default function RestaurantCard({ restaurant: r, lang, t }: Props) {
             })}
           </div>
         )}
+
+        {/* Unconfirmed delivery warning */}
+        {r.deliveryUnconfirmed && (
+          <p className="mt-2.5 text-[10px] leading-snug" style={{ color: "#9c6b1a" }}>
+            ⚠️ {lang === "he" ? "משלוח לא מאומת — התקשרו לפני הזמנה" : "Delivery unconfirmed — call before ordering"}
+          </p>
+        )}
       </div>
 
       {/* Delivery stats grid */}

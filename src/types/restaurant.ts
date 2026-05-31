@@ -50,5 +50,6 @@ export interface Restaurant {
   dietaryTags: DietaryTag[];
   phone?: string;
   lastVerified: string;
+  deliveryUnconfirmed?: boolean;
   notes?: string;
 }
