@@ -33,6 +33,8 @@ export const strings = {
     platformLabel: 'Orders via',
     heverFilter: 'Hever Card',
     heverBadge: 'Hever',
+    viewList: 'List',
+    viewMap: 'Map',
     cuisineLabels: {
       pizza: 'Pizza',
       asian: 'Asian',
@@ -91,6 +93,8 @@ export const strings = {
     platformLabel: 'הזמנות דרך',
     heverFilter: 'כרטיס חבר',
     heverBadge: 'חבר',
+    viewList: 'רשימה',
+    viewMap: 'מפה',
     cuisineLabels: {
       pizza: 'פיצה',
       asian: 'אסייתי',

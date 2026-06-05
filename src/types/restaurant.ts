@@ -56,4 +56,6 @@ export interface Restaurant {
   couponCode?: string;
   lastVerified: string;
   notes?: string;
+  lat?: number;
+  lng?: number;
 }

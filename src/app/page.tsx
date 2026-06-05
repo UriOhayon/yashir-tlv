@@ -1,7 +1,8 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import { Store, AlertTriangle } from "lucide-react";
+import dynamic from "next/dynamic";
+import { Store, AlertTriangle, List, Map } from "lucide-react";
 import { restaurants } from "@/data/restaurants";
 import { strings } from "@/i18n/strings";
 import type { Lang } from "@/i18n/strings";
@@ -12,6 +13,8 @@ import SearchBar from "@/components/SearchBar";
 import FilterBar from "@/components/FilterBar";
 import RestaurantCard from "@/components/RestaurantCard";
 
+const MapView = dynamic(() => import("@/components/MapView"), { ssr: false });
+
 export default function Home() {
   const [lang, setLang] = useState<Lang>("en");
   const [search, setSearch] = useState("");
@@ -19,6 +22,7 @@ export default function Home() {
   const [dietaryFilters, setDietaryFilters] = useState<DietaryTag[]>([]);
   const [openNow, setOpenNow] = useState(false);
   const [heverFilter, setHeverFilter] = useState(false);
+  const [view, setView] = useState<"list" | "map">("list");
 
   const t = strings[lang];
 
@@ -147,16 +151,43 @@ export default function Home() {
           <p className="text-sm font-medium" style={{ color: "var(--muted)" }}>
             {t.statsLabel(filtered.length)}
           </p>
-          <span
-            className="rounded-full px-2.5 py-1 text-xs font-semibold"
-            style={{ backgroundColor: "#e6f4ea", color: "#2d6a4f" }}
-          >
-            ✓ Direct delivery
-          </span>
+          <div className="flex items-center gap-2">
+            <span
+              className="rounded-full px-2.5 py-1 text-xs font-semibold"
+              style={{ backgroundColor: "#e6f4ea", color: "#2d6a4f" }}
+            >
+              ✓ Direct delivery
+            </span>
+            {/* List / Map toggle */}
+            <div className="flex overflow-hidden rounded-full border" style={{ borderColor: "var(--border)" }}>
+              <button
+                onClick={() => setView("list")}
+                className="flex items-center gap-1 px-3 py-1 text-xs font-semibold transition"
+                style={view === "list"
+                  ? { backgroundColor: "var(--brand)", color: "#fff" }
+                  : { backgroundColor: "transparent", color: "var(--muted)" }}
+              >
+                <List size={12} />
+                {t.viewList}
+              </button>
+              <button
+                onClick={() => setView("map")}
+                className="flex items-center gap-1 px-3 py-1 text-xs font-semibold transition"
+                style={view === "map"
+                  ? { backgroundColor: "var(--brand)", color: "#fff" }
+                  : { backgroundColor: "transparent", color: "var(--muted)" }}
+              >
+                <Map size={12} />
+                {t.viewMap}
+              </button>
+            </div>
+          </div>
         </div>
 
-        {/* ── Restaurant grid ── */}
-        {filtered.length > 0 ? (
+        {/* ── Restaurant grid / Map ── */}
+        {view === "map" ? (
+          <MapView restaurants={filtered} t={t} lang={lang} />
+        ) : filtered.length > 0 ? (
           <div className="grid gap-4 sm:grid-cols-2">
             {filtered.map((r) => (
               <RestaurantCard key={r.id} restaurant={r} lang={lang} t={t} />
