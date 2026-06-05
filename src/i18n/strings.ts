@@ -6,12 +6,12 @@ export const strings = {
     siteTitleHe: 'ישיר',
     location: 'Tel Aviv–Yafo',
     tagline:
-      "Order straight from Tel Aviv kitchens that keep their own drivers — no aggregators, no 27% commission, no Wolt.",
+      "Order straight from Tel Aviv kitchens that keep their own drivers — no aggregators, no 27% commission.",
     warningTitle: 'For guidance only.',
     warningBody:
-      "Information on this site is community-maintained and may be incomplete or out of date. Hours, fees, and delivery areas change without notice — always confirm directly with the restaurant before ordering. Dietary tags are for general guidance only; never rely on them for allergy or medical decisions. Yashir makes no warranties regarding accuracy and accepts no liability for any decisions made based on this information.",
+      "Data may be outdated — always confirm with the restaurant before ordering. Dietary tags are not medical advice. Yashir makes no warranties and accepts no liability for any decisions made based on this information.",
     openNow: 'Open Now',
-    statsLabel: (count: number) => `${count} restaurants · No Wolt`,
+    statsLabel: (count: number) => `${count} restaurants · Direct delivery`,
     searchPlaceholder: 'Search restaurants…',
     filterCuisine: 'Cuisine',
     filterDietary: 'Dietary',
@@ -64,12 +64,12 @@ export const strings = {
     siteTitleHe: 'Yashir',
     location: 'תל אביב–יפו',
     tagline:
-      'הזמינו ישירות ממסעדות תל אביב שמשלחות בעצמן — ללא מתווכים, ללא 27% עמלה, ללא וולט.',
+      'הזמינו ישירות ממסעדות תל אביב שמשלחות בעצמן — ללא מתווכים, ללא 27% עמלה.',
     warningTitle: 'למטרת הכוונה בלבד.',
     warningBody:
-      'המידע באתר מתוחזק על ידי הקהילה ועשוי להיות חלקי או לא מעודכן. שעות, עמלות ואזורי משלוח משתנים ללא הודעה מוקדמת — אמתו תמיד ישירות מול המסעדה לפני הזמנה. תגיות תזונה הן להכוונה כללית בלבד; אל תסתמכו עליהן להחלטות רפואיות או בנוגע לאלרגיות. ישיר אינו מתחייב לדיוק המידע ואינו אחראי לכל החלטה שתתקבל על סמכו.',
+      'המידע עשוי להיות לא מעודכן — אמתו ישירות מול המסעדה לפני הזמנה. תגיות תזונה אינן ייעוץ רפואי. ישיר אינו מתחייב לדיוק ואינו אחראי לכל החלטה שתתקבל על סמך המידע.',
     openNow: 'פתוח עכשיו',
-    statsLabel: (count: number) => `${count} מסעדות · ללא וולט`,
+    statsLabel: (count: number) => `${count} מסעדות · משלוח ישיר`,
     searchPlaceholder: 'חיפוש מסעדות…',
     filterCuisine: 'מטבח',
     filterDietary: 'תזונה',

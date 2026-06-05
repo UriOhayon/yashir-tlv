@@ -18,14 +18,14 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Yashir | ישיר — Tel Aviv Direct Delivery",
   description:
-    "Order straight from Tel Aviv kitchens that keep their own drivers — no aggregators, no 27% commission, no Wolt.",
+    "Order straight from Tel Aviv kitchens that keep their own drivers — no aggregators, no 27% commission.",
   keywords: [
     "Tel Aviv",
     "Yafo",
     "delivery",
     "restaurants",
-    "no Wolt",
     "direct delivery",
+    "no aggregators",
     "ישיר",
     "משלוח",
     "תל אביב",

@@ -151,7 +151,7 @@ export default function Home() {
             className="rounded-full px-2.5 py-1 text-xs font-semibold"
             style={{ backgroundColor: "#e6f4ea", color: "#2d6a4f" }}
           >
-            ✓ Zero Wolt
+            ✓ Direct delivery
           </span>
         </div>
 
@@ -195,7 +195,7 @@ export default function Home() {
       </main>
 
       <footer className="mt-6 border-t py-6 text-center text-xs" style={{ borderColor: "var(--border)", color: "#9c8060" }}>
-        Yashir · ישיר &nbsp;·&nbsp; Data verified by Claude · No affiliation with Wolt or Ten Bis
+        Yashir · ישיר &nbsp;·&nbsp; Data verified by Claude
       </footer>
     </div>
   );
