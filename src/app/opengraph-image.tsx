@@ -40,6 +40,7 @@ export default function OGImage() {
             letterSpacing: "-2px",
             lineHeight: 1,
             marginBottom: "20px",
+            direction: "rtl",
           }}
         >
           ישיר
