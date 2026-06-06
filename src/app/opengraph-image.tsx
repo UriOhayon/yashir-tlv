@@ -5,29 +5,7 @@ export const alt = "Yashir — Tel Aviv Direct Delivery";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
-async function loadHebrewFont(): Promise<ArrayBuffer | null> {
-  try {
-    const css = await fetch(
-      "https://fonts.googleapis.com/css2?family=Heebo:wght@700",
-      {
-        headers: {
-          "User-Agent":
-            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
-        },
-      }
-    ).then((r) => r.text());
-
-    const match = css.match(/src: url\(([^)]+\.woff2)\)/);
-    if (!match) return null;
-    return fetch(match[1]).then((r) => r.arrayBuffer());
-  } catch {
-    return null;
-  }
-}
-
-export default async function OGImage() {
-  const hebrewFont = await loadHebrewFont();
-
+export default function OGImage() {
   return new ImageResponse(
     (
       <div
@@ -42,50 +20,42 @@ export default async function OGImage() {
           padding: "60px",
         }}
       >
-        {/* Accent bar */}
         <div
           style={{
             width: "80px",
             height: "5px",
             backgroundColor: "#c4421a",
-            marginBottom: "36px",
+            marginBottom: "40px",
             borderRadius: "2px",
           }}
         />
-
-        {/* Brand name */}
         <div
           style={{
-            fontSize: "120px",
-            fontWeight: 700,
-            fontFamily: hebrewFont ? "Heebo" : "serif",
+            fontSize: "130px",
+            fontWeight: 800,
             color: "#f5ede0",
+            letterSpacing: "-4px",
             lineHeight: 1,
-            marginBottom: "20px",
-            direction: "rtl",
+            marginBottom: "24px",
           }}
         >
-          {hebrewFont ? "ישיר" : "YASHIR"}
+          YASHIR
         </div>
-
-        {/* English subtitle */}
         <div
           style={{
-            fontSize: "36px",
+            fontSize: "34px",
             fontWeight: 400,
             color: "#d6c9b0",
-            letterSpacing: "6px",
+            letterSpacing: "8px",
             textTransform: "uppercase",
             marginBottom: "48px",
           }}
         >
           Tel Aviv Direct Delivery
         </div>
-
-        {/* Tagline */}
         <div
           style={{
-            fontSize: "26px",
+            fontSize: "24px",
             color: "#c4421a",
             letterSpacing: "1px",
           }}
@@ -94,11 +64,6 @@ export default async function OGImage() {
         </div>
       </div>
     ),
-    {
-      ...size,
-      fonts: hebrewFont
-        ? [{ name: "Heebo", data: hebrewFont, weight: 700 }]
-        : [],
-    }
+    { ...size }
   );
 }
