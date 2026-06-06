@@ -5,7 +5,29 @@ export const alt = "Yashir — Tel Aviv Direct Delivery";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
-export default function OGImage() {
+async function loadHebrewFont(): Promise<ArrayBuffer | null> {
+  try {
+    const css = await fetch(
+      "https://fonts.googleapis.com/css2?family=Heebo:wght@700",
+      {
+        headers: {
+          "User-Agent":
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+        },
+      }
+    ).then((r) => r.text());
+
+    const match = css.match(/src: url\(([^)]+\.woff2)\)/);
+    if (!match) return null;
+    return fetch(match[1]).then((r) => r.arrayBuffer());
+  } catch {
+    return null;
+  }
+}
+
+export default async function OGImage() {
+  const hebrewFont = await loadHebrewFont();
+
   return new ImageResponse(
     (
       <div
@@ -31,19 +53,19 @@ export default function OGImage() {
           }}
         />
 
-        {/* Hebrew name */}
+        {/* Brand name */}
         <div
           style={{
             fontSize: "120px",
-            fontWeight: 800,
+            fontWeight: 700,
+            fontFamily: hebrewFont ? "Heebo" : "serif",
             color: "#f5ede0",
-            letterSpacing: "-2px",
             lineHeight: 1,
             marginBottom: "20px",
             direction: "rtl",
           }}
         >
-          ישיר
+          {hebrewFont ? "ישיר" : "YASHIR"}
         </div>
 
         {/* English subtitle */}
@@ -72,6 +94,11 @@ export default function OGImage() {
         </div>
       </div>
     ),
-    { ...size }
+    {
+      ...size,
+      fonts: hebrewFont
+        ? [{ name: "Heebo", data: hebrewFont, weight: 700 }]
+        : [],
+    }
   );
 }
