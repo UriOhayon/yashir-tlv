@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from "react";
 import dynamic from "next/dynamic";
+import Link from "next/link";
 import { Store, AlertTriangle, List, Map } from "lucide-react";
 import { restaurants } from "@/data/restaurants";
 import { strings } from "@/i18n/strings";
@@ -16,7 +17,7 @@ import RestaurantCard from "@/components/RestaurantCard";
 const MapView = dynamic(() => import("@/components/MapView"), { ssr: false });
 
 export default function Home() {
-  const [lang, setLang] = useState<Lang>("en");
+  const [lang, setLang] = useState<Lang>("he");
   const [search, setSearch] = useState("");
   const [cuisineFilter, setCuisineFilter] = useState<CuisineType | "all">("all");
   const [dietaryFilters, setDietaryFilters] = useState<DietaryTag[]>([]);
@@ -204,9 +205,35 @@ export default function Home() {
           </div>
         )}
 
+        {/* Browse by cuisine — internal links for users + crawlers */}
+        <nav className="mt-12">
+          <p className="mb-3 text-sm font-medium" style={{ color: "var(--muted)" }}>
+            {lang === "he" ? "עיון לפי מטבח" : "Browse by cuisine"}
+          </p>
+          <div className="flex flex-wrap gap-2">
+            {Array.from(new Set(restaurants.map((r) => r.cuisineType))).map((c) => (
+              <Link
+                key={c}
+                href={`/cuisine/${c}`}
+                className="rounded-full border px-3 py-1.5 text-xs font-semibold transition hover:opacity-70"
+                style={{ borderColor: "var(--border)", color: "var(--ink)" }}
+              >
+                {t.cuisineLabels[c]}
+              </Link>
+            ))}
+            <Link
+              href="/open-now"
+              className="rounded-full border px-3 py-1.5 text-xs font-semibold transition hover:opacity-70"
+              style={{ borderColor: "var(--brand)", color: "var(--brand)" }}
+            >
+              {t.openNow}
+            </Link>
+          </div>
+        </nav>
+
         {/* Suggest footer */}
         <div
-          className="mt-12 rounded-2xl border border-dashed p-6 text-center"
+          className="mt-8 rounded-2xl border border-dashed p-6 text-center"
           style={{ borderColor: "var(--border)", backgroundColor: "rgba(255,255,255,0.4)" }}
         >
           <p className="text-sm font-medium" style={{ color: "var(--muted)" }}>

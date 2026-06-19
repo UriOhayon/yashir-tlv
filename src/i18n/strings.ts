@@ -6,7 +6,7 @@ export const strings = {
     siteTitleHe: 'ישיר',
     location: 'Tel Aviv–Yafo',
     tagline:
-      "Order straight from Tel Aviv kitchens that keep their own drivers — no aggregators, no 27% commission.",
+      "Order straight from Tel Aviv kitchens that keep their own drivers — no middlemen, no commissions, often cheaper.",
     warningTitle: 'For guidance only.',
     warningBody:
       "Data may be outdated — always confirm with the restaurant before ordering. Dietary tags are not medical advice. Yashir makes no warranties and accepts no liability for any decisions made based on this information.",
@@ -66,7 +66,7 @@ export const strings = {
     siteTitleHe: 'Yashir',
     location: 'תל אביב–יפו',
     tagline:
-      'הזמינו ישירות ממסעדות תל אביב שמשלחות בעצמן — ללא מתווכים, ללא 27% עמלה.',
+      'הזמינו ישירות ממסעדות תל אביב שמשלחות בעצמן — בלי מתווכים, בלי עמלות, ולרוב גם זול יותר.',
     warningTitle: 'למטרת הכוונה בלבד.',
     warningBody:
       'המידע עשוי להיות לא מעודכן — אמתו ישירות מול המסעדה לפני הזמנה. תגיות תזונה אינן ייעוץ רפואי. ישיר אינו מתחייב לדיוק ואינו אחראי לכל החלטה שתתקבל על סמך המידע.',

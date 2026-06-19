@@ -18,38 +18,54 @@ const inter = Inter({
 const BASE_URL = "https://yashir-tlv.vercel.app";
 
 export const metadata: Metadata = {
-  title: "Yashir | ישיר — Tel Aviv Direct Delivery",
+  title: {
+    default: "ישיר | משלוח ישיר ממסעדות תל אביב — בלי אפליקציות, בלי עמלות",
+    template: "%s",
+  },
   description:
-    "Order straight from Tel Aviv kitchens that keep their own drivers — no aggregators, no commission.",
+    "הזמינו ישירות ממסעדות תל אביב שמשלחות בעצמן — בלי מתווכים, בלי עמלות, ולרוב גם זול יותר. סינון לפי מטבח, תזונה ושעות פתיחה.",
   keywords: [
-    "Tel Aviv",
-    "Yafo",
-    "delivery",
-    "restaurants",
-    "direct delivery",
-    "no aggregators",
+    "משלוח תל אביב",
+    "משלוח ישיר",
+    "הזמנה ישירה ממסעדה",
+    "מסעדות תל אביב משלוח",
+    "משלוח טבעוני תל אביב",
+    "משלוח סושי תל אביב",
+    "משלוח המבורגר תל אביב",
+    "Tel Aviv direct delivery",
     "ישיר",
-    "משלוח",
-    "תל אביב",
+    "תל אביב–יפו",
   ],
   metadataBase: new URL(BASE_URL),
+  alternates: { canonical: BASE_URL },
   openGraph: {
-    title: "Yashir | Tel Aviv Direct Delivery",
+    title: "ישיר | משלוח ישיר ממסעדות תל אביב",
     description:
-      "Order directly from Tel Aviv restaurants. No middlemen, no commission.",
+      "הזמינו ישירות ממסעדות תל אביב שמשלחות בעצמן. בלי מתווכים, בלי עמלות.",
     url: BASE_URL,
-    siteName: "Yashir",
-    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Yashir — Tel Aviv Direct Delivery" }],
-    locale: "en_IL",
+    siteName: "Yashir · ישיר",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "ישיר — משלוח ישיר ממסעדות תל אביב" }],
+    locale: "he_IL",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Yashir | Tel Aviv Direct Delivery",
+    title: "ישיר | משלוח ישיר ממסעדות תל אביב",
     description:
-      "Order directly from Tel Aviv restaurants. No middlemen, no commission.",
+      "הזמינו ישירות ממסעדות תל אביב שמשלחות בעצמן. בלי מתווכים, בלי עמלות.",
     images: ["/opengraph-image"],
   },
+};
+
+const siteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "ישיר · Yashir",
+  alternateName: "Yashir",
+  url: BASE_URL,
+  inLanguage: "he-IL",
+  description:
+    "מדריך למסעדות תל אביב שמשלחות בעצמן — הזמנה ישירה מהאתר של המסעדה.",
 };
 
 export default function RootLayout({
@@ -58,8 +74,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${playfair.variable} ${inter.variable}`}>
-      <body className="antialiased">{children}</body>
+    <html lang="he" dir="rtl" className={`${playfair.variable} ${inter.variable}`}>
+      <body className="antialiased">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(siteJsonLd) }}
+        />
+        {children}
+      </body>
     </html>
   );
 }
