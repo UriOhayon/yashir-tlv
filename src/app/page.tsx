@@ -240,20 +240,36 @@ export default function Home() {
             {t.suggestTitle}
           </p>
           <a
-            href="mailto:urioha@gmail.com?subject=Restaurant%20suggestion%20for%20Yashir"
+            href="https://x.com/OhayonUri"
+            target="_blank"
+            rel="noopener noreferrer"
             className="mt-2 inline-block text-sm font-semibold hover:underline"
             style={{ color: "var(--brand)" }}
           >
             {t.suggestLink}
           </a>
-          <p className="mt-1 text-xs" style={{ color: "var(--muted)", opacity: 0.7 }}>
-            urioha@gmail.com
-          </p>
+          <a
+            href="https://x.com/OhayonUri"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-1 block text-xs hover:underline"
+            style={{ color: "var(--muted)", opacity: 0.7 }}
+          >
+            @OhayonUri
+          </a>
         </div>
       </main>
 
       <footer className="mt-6 border-t py-6 text-center text-xs" style={{ borderColor: "var(--border)", color: "#9c8060" }}>
-        Yashir · ישיר &nbsp;·&nbsp; Data verified by Claude
+        <a
+          href="https://x.com/OhayonUri/status/2069847066633818318"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:underline"
+          style={{ color: "#9c8060" }}
+        >
+          Yashir · ישיר — הסיפור מאחורי הפרויקט
+        </a>
       </footer>
     </div>
   );

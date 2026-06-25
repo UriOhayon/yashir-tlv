@@ -172,7 +172,7 @@ export default async function RestaurantPage({
       </main>
 
       <footer className="mt-6 border-t py-6 text-center text-xs" style={{ borderColor: "var(--border)", color: "#9c8060" }}>
-        ישיר · Yashir — משלוח ישיר ממסעדות תל אביב
+        <a href="https://x.com/OhayonUri" target="_blank" rel="noopener noreferrer" className="hover:underline" style={{ color: "#9c8060" }}>ישיר · Yashir — משלוח ישיר ממסעדות תל אביב</a>
       </footer>
     </div>
   );
