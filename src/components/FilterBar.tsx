@@ -31,6 +31,8 @@ interface Props {
   setDietaryFilters: (v: DietaryTag[]) => void;
   heverFilter: boolean;
   setHeverFilter: (v: boolean) => void;
+  openNow: boolean;
+  setOpenNow: (v: boolean) => void;
   t: Strings;
 }
 
@@ -41,6 +43,8 @@ export default function FilterBar({
   setDietaryFilters,
   heverFilter,
   setHeverFilter,
+  openNow,
+  setOpenNow,
   t,
 }: Props) {
   function toggleDietary(tag: DietaryTag) {
@@ -53,6 +57,19 @@ export default function FilterBar({
 
   return (
     <div className="flex flex-wrap items-center gap-2">
+      {/* Open now */}
+      <button
+        onClick={() => setOpenNow(!openNow)}
+        className="rounded-full border px-3 py-1.5 text-xs font-medium transition"
+        style={
+          openNow
+            ? { borderColor: "var(--brand)", backgroundColor: "rgba(21,128,61,0.08)", color: "var(--brand)" }
+            : { borderColor: "var(--border)", backgroundColor: "#ffffff", color: "var(--muted)" }
+        }
+      >
+        {t.openNow}
+      </button>
+
       {/* Cuisine select */}
       <select
         value={cuisineFilter}
@@ -82,7 +99,7 @@ export default function FilterBar({
             className="rounded-full border px-3 py-1.5 text-xs font-medium transition"
             style={
               active
-                ? { borderColor: "var(--brand)", backgroundColor: "rgba(196, 66, 26, 0.08)", color: "var(--brand)" }
+                ? { borderColor: "var(--brand)", backgroundColor: "rgba(21,128,61,0.08)", color: "var(--brand)" }
                 : { borderColor: "var(--border)", backgroundColor: "#ffffff", color: "var(--muted)" }
             }
           >

@@ -109,21 +109,6 @@ export default function Home() {
         <div className="mb-7 flex flex-col gap-3">
           <SearchBar value={search} onChange={setSearch} placeholder={t.searchPlaceholder} />
 
-          {/* Open Now toggle */}
-          <div>
-            <button
-              onClick={() => setOpenNow((v) => !v)}
-              className="rounded-full border-2 px-4 py-1.5 text-xs font-bold tracking-wide transition"
-              style={
-                openNow
-                  ? { backgroundColor: "var(--brand)", borderColor: "var(--brand)", color: "#fff" }
-                  : { backgroundColor: "transparent", borderColor: "var(--border)", color: "var(--muted)" }
-              }
-            >
-              {t.openNow}
-            </button>
-          </div>
-
           <FilterBar
             cuisineFilter={cuisineFilter}
             setCuisineFilter={setCuisineFilter}
@@ -131,6 +116,8 @@ export default function Home() {
             setDietaryFilters={setDietaryFilters}
             heverFilter={heverFilter}
             setHeverFilter={setHeverFilter}
+            openNow={openNow}
+            setOpenNow={setOpenNow}
             t={t}
           />
         </div>
@@ -141,12 +128,6 @@ export default function Home() {
             {t.statsLabel(filtered.length)}
           </p>
           <div className="flex items-center gap-2">
-            <span
-              className="rounded-full px-2.5 py-1 text-xs font-semibold"
-              style={{ backgroundColor: "#dcfce7", color: "#15803d" }}
-            >
-              {lang === "he" ? "משלוח ישיר" : "Direct delivery"}
-            </span>
             {/* List / Map toggle */}
             <div className="flex overflow-hidden rounded-full border" style={{ borderColor: "var(--border)" }}>
               <button
@@ -204,18 +185,11 @@ export default function Home() {
                 key={c}
                 href={`/cuisine/${c}`}
                 className="rounded-full border px-3 py-1.5 text-xs font-semibold transition hover:opacity-70"
-                style={{ borderColor: "var(--border)", color: "var(--ink)" }}
+                style={{ borderColor: "var(--border)", color: "var(--muted)" }}
               >
                 {t.cuisineLabels[c]}
               </Link>
             ))}
-            <Link
-              href="/open-now"
-              className="rounded-full border px-3 py-1.5 text-xs font-semibold transition hover:opacity-70"
-              style={{ borderColor: "var(--brand)", color: "var(--brand)" }}
-            >
-              {t.openNow}
-            </Link>
           </div>
         </nav>
 
