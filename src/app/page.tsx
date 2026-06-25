@@ -249,13 +249,13 @@ export default function Home() {
             {t.suggestLink}
           </a>
           <a
-            href="https://x.com/OhayonUri"
+            href="https://x.com/OhayonUri/status/2069847066633818318"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-1 block text-xs hover:underline"
-            style={{ color: "var(--muted)", opacity: 0.7 }}
+            className="mt-2 block text-sm font-semibold hover:underline"
+            style={{ color: "var(--brand)" }}
           >
-            @OhayonUri
+            {t.storyLink}
           </a>
         </div>
       </main>
