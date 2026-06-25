@@ -10,6 +10,7 @@ import {
   ChevronUp,
   ExternalLink,
   Phone,
+  Tag,
 } from "lucide-react";
 import type { Restaurant, DietaryTag } from "@/types/restaurant";
 import type { Lang, Strings } from "@/i18n/strings";
@@ -41,9 +42,8 @@ export default function RestaurantCard({ restaurant: r, lang, t }: Props) {
     <div
       className="flex flex-col rounded-2xl transition hover:shadow-md"
       style={{
-        backgroundColor: "rgba(255,255,255,0.65)",
+        backgroundColor: "#ffffff",
         border: "1px solid var(--border)",
-        backdropFilter: "blur(4px)",
       }}
     >
       {/* Header */}
@@ -59,7 +59,7 @@ export default function RestaurantCard({ restaurant: r, lang, t }: Props) {
           </div>
           <span
             className="shrink-0 rounded-full px-2.5 py-0.5 text-xs font-medium"
-            style={{ backgroundColor: "rgba(196,66,26,0.08)", color: "var(--brand)" }}
+            style={{ backgroundColor: "rgba(21,128,61,0.08)", color: "var(--brand)" }}
           >
             {t.cuisineLabels[r.cuisineType]}
           </span>
@@ -89,7 +89,7 @@ export default function RestaurantCard({ restaurant: r, lang, t }: Props) {
             className="mt-2.5 flex items-start gap-1.5 rounded-lg px-2.5 py-1.5 text-[10px] leading-snug"
             style={{ backgroundColor: "#fefce8", border: "1px solid #fde68a", color: "#92400e" }}
           >
-            <span className="shrink-0">🏷️</span>
+            <Tag size={11} className="mt-0.5 shrink-0" />
             <span><strong>{lang === "he" ? "קוד קופון:" : "Coupon:"}</strong> {r.couponCode}</span>
           </div>
         )}
@@ -98,16 +98,16 @@ export default function RestaurantCard({ restaurant: r, lang, t }: Props) {
         {r.acceptsHever && (
           <span
             className="mt-2.5 inline-block rounded-full border px-2 py-0.5 text-xs font-semibold"
-            style={{ backgroundColor: "#e8f0fe", color: "#1a56db", borderColor: "#93c5fd" }}
+            style={{ backgroundColor: "#dcfce7", color: "#15803d", borderColor: "#86efac" }}
           >
-            ✦ {lang === "he" ? "כרטיס חבר" : "Hever Card"}
+            {lang === "he" ? "כרטיס חבר" : "Hever Card"}
           </span>
         )}
 
         {/* Unconfirmed delivery warning */}
         {r.deliveryUnconfirmed && (
           <p className="mt-2.5 text-[10px] leading-snug" style={{ color: "#9c6b1a" }}>
-            ⚠️ {lang === "he" ? "משלוח לא מאומת - התקשרו לפני הזמנה" : "Delivery unconfirmed - call before ordering"}
+            {lang === "he" ? "משלוח לא מאומת - התקשרו לפני הזמנה" : "Delivery unconfirmed - call before ordering"}
           </p>
         )}
       </div>
@@ -149,7 +149,7 @@ export default function RestaurantCard({ restaurant: r, lang, t }: Props) {
         className="mt-auto flex items-center justify-between px-4 py-3"
         style={{ borderTop: "1px solid var(--border)" }}
       >
-        <span className="text-[10px]" style={{ color: "#9c8060" }}>
+        <span className="text-[10px]" style={{ color: "#9ca3af" }}>
           {t.verifiedOn} {verifiedDate}
         </span>
         {r.website ? (
@@ -188,7 +188,7 @@ function Stat({
   value: string;
 }) {
   return (
-    <div className="flex items-center gap-1.5 px-3 py-2" style={{ backgroundColor: "rgba(255,255,255,0.5)" }}>
+    <div className="flex items-center gap-1.5 px-3 py-2" style={{ backgroundColor: "#ffffff" }}>
       <span style={{ color: "var(--muted)", opacity: 0.7 }}>{icon}</span>
       <div className="min-w-0">
         <div className="text-[9px] uppercase tracking-wide" style={{ color: "var(--muted)", opacity: 0.7 }}>

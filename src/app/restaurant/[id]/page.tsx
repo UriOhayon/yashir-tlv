@@ -69,7 +69,7 @@ export default async function RestaurantPage({
 
       <header
         className="sticky top-0 z-10 backdrop-blur-sm"
-        style={{ borderBottom: "1px solid var(--border)", backgroundColor: "rgba(245, 237, 224, 0.92)" }}
+        style={{ borderBottom: "1px solid var(--border)", backgroundColor: "rgba(255, 255, 255, 0.85)" }}
       >
         <div className="mx-auto flex max-w-3xl items-center justify-between px-5 py-3">
           <Link href="/" className="font-serif text-base font-bold" style={{ color: "var(--ink)", fontFamily: "var(--font-serif)" }}>
@@ -160,7 +160,7 @@ export default async function RestaurantPage({
           <p className="mt-6 text-sm leading-relaxed" style={{ color: "var(--muted)" }}>{r.notes}</p>
         )}
 
-        <p className="mt-6 text-xs" style={{ color: "#9c8060" }}>
+        <p className="mt-6 text-xs" style={{ color: "#9ca3af" }}>
           {t.warningTitle} {t.warningBody}
         </p>
 
@@ -171,8 +171,8 @@ export default async function RestaurantPage({
         </div>
       </main>
 
-      <footer className="mt-6 border-t py-6 text-center text-xs" style={{ borderColor: "var(--border)", color: "#9c8060" }}>
-        <a href="https://x.com/OhayonUri" target="_blank" rel="noopener noreferrer" className="hover:underline" style={{ color: "#9c8060" }}>ישיר · Yashir - משלוח ישיר ממסעדות תל אביב</a>
+      <footer className="mt-6 border-t py-6 text-center text-xs" style={{ borderColor: "var(--border)", color: "#9ca3af" }}>
+        <a href="https://x.com/OhayonUri" target="_blank" rel="noopener noreferrer" className="hover:underline" style={{ color: "#9ca3af" }}>ישיר · Yashir - משלוח ישיר ממסעדות תל אביב</a>
       </footer>
     </div>
   );
@@ -180,7 +180,7 @@ export default async function RestaurantPage({
 
 function Fact({ label, value }: { label: string; value: string }) {
   return (
-    <div className="rounded-xl px-3 py-2.5" style={{ backgroundColor: "rgba(255,255,255,0.6)", border: "1px solid var(--border)" }}>
+    <div className="rounded-xl px-3 py-2.5" style={{ backgroundColor: "#ffffff", border: "1px solid var(--border)" }}>
       <div className="text-[10px] uppercase tracking-wide" style={{ color: "var(--muted)", opacity: 0.7 }}>{label}</div>
       <div className="mt-0.5 text-sm font-semibold" style={{ color: "var(--ink)" }}>{value}</div>
     </div>

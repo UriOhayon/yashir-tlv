@@ -54,8 +54,8 @@ export default function MapView({ restaurants, t, lang }: Props) {
               center={[r.lat!, r.lng!]}
               radius={r.deliveryRadiusKm * 1000}
               pathOptions={{
-                color: "#c4421a",
-                fillColor: "#c4421a",
+                color: "#15803d",
+                fillColor: "#15803d",
                 fillOpacity: 0.07,
                 weight: 1.5,
               }}
@@ -72,7 +72,7 @@ export default function MapView({ restaurants, t, lang }: Props) {
                   )}
                   {r.couponCode && (
                     <div style={{ fontSize: 11, color: "#92400e", marginTop: 4, background: "#fefce8", padding: "2px 6px", borderRadius: 4 }}>
-                      🏷️ {r.couponCode}
+                      {r.couponCode}
                     </div>
                   )}
                   {r.website && (
@@ -85,7 +85,7 @@ export default function MapView({ restaurants, t, lang }: Props) {
                         marginTop: 6,
                         fontSize: 11,
                         fontWeight: 600,
-                        color: "#c4421a",
+                        color: "#15803d",
                         textDecoration: "none",
                       }}
                     >

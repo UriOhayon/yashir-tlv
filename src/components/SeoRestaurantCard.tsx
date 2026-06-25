@@ -8,7 +8,7 @@ export default function SeoRestaurantCard({ r }: { r: Restaurant }) {
   return (
     <article
       className="flex flex-col rounded-2xl p-4"
-      style={{ backgroundColor: "rgba(255,255,255,0.65)", border: "1px solid var(--border)" }}
+      style={{ backgroundColor: "#ffffff", border: "1px solid var(--border)" }}
     >
       <div className="flex items-start justify-between gap-2">
         <div>
@@ -23,7 +23,7 @@ export default function SeoRestaurantCard({ r }: { r: Restaurant }) {
         </div>
         <span
           className="shrink-0 rounded-full px-2.5 py-0.5 text-xs font-medium"
-          style={{ backgroundColor: "rgba(196,66,26,0.08)", color: "var(--brand)" }}
+          style={{ backgroundColor: "rgba(21,128,61,0.08)", color: "var(--brand)" }}
         >
           {cuisineHe[r.cuisineType]}
         </span>

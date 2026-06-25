@@ -60,7 +60,7 @@ export default function FilterBar({
         className="rounded-full border px-3 py-1.5 text-xs font-medium focus:outline-none"
         style={{
           borderColor: "var(--border)",
-          backgroundColor: "rgba(255,255,255,0.6)",
+          backgroundColor: "#ffffff",
           color: "var(--muted)",
         }}
       >
@@ -83,7 +83,7 @@ export default function FilterBar({
             style={
               active
                 ? { borderColor: "var(--brand)", backgroundColor: "rgba(196, 66, 26, 0.08)", color: "var(--brand)" }
-                : { borderColor: "var(--border)", backgroundColor: "rgba(255,255,255,0.6)", color: "var(--muted)" }
+                : { borderColor: "var(--border)", backgroundColor: "#ffffff", color: "var(--muted)" }
             }
           >
             {t.dietaryLabels[tag]}
@@ -97,11 +97,11 @@ export default function FilterBar({
         className="rounded-full border px-3 py-1.5 text-xs font-semibold transition"
         style={
           heverFilter
-            ? { borderColor: "#1a56db", backgroundColor: "#e8f0fe", color: "#1a56db" }
-            : { borderColor: "var(--border)", backgroundColor: "rgba(255,255,255,0.6)", color: "var(--muted)" }
+            ? { borderColor: "var(--brand)", backgroundColor: "rgba(21,128,61,0.08)", color: "var(--brand)" }
+            : { borderColor: "var(--border)", backgroundColor: "#ffffff", color: "var(--muted)" }
         }
       >
-        ✦ {t.heverFilter}
+        {t.heverFilter}
       </button>
     </div>
   );

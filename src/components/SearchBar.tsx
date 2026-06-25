@@ -24,7 +24,7 @@ export default function SearchBar({ value, onChange, placeholder }: Props) {
         className="w-full rounded-xl border py-2.5 pl-9 pr-4 text-sm transition focus:outline-none focus:ring-2"
         style={{
           borderColor: "var(--border)",
-          backgroundColor: "rgba(255,255,255,0.6)",
+          backgroundColor: "#ffffff",
           color: "var(--ink)",
         }}
       />

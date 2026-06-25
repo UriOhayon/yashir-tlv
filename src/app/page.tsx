@@ -3,7 +3,7 @@
 import { useState, useMemo } from "react";
 import dynamic from "next/dynamic";
 import Link from "next/link";
-import { Store, AlertTriangle, List, Map } from "lucide-react";
+import { Store, List, Map } from "lucide-react";
 import { restaurants } from "@/data/restaurants";
 import { strings } from "@/i18n/strings";
 import type { Lang } from "@/i18n/strings";
@@ -53,7 +53,7 @@ export default function Home() {
         className="sticky top-0 z-10 backdrop-blur-sm"
         style={{
           borderBottom: "1px solid var(--border)",
-          backgroundColor: "rgba(245, 237, 224, 0.92)",
+          backgroundColor: "rgba(255, 255, 255, 0.85)",
         }}
       >
         <div className="mx-auto flex max-w-3xl items-center justify-between px-5 py-3">
@@ -80,11 +80,9 @@ export default function Home() {
             </span>
             <h1
               className="text-4xl font-extrabold leading-none tracking-tight sm:text-5xl"
-              style={{ fontFamily: "var(--font-serif)", color: "var(--ink)" }}
+              style={{ color: "var(--ink)" }}
             >
               {t.siteTitle}
-              <span style={{ color: "var(--brand)" }}> • </span>
-              {t.siteTitleHe}
             </h1>
           </div>
 
@@ -105,17 +103,7 @@ export default function Home() {
         {/* Divider */}
         <hr style={{ borderColor: "var(--border)" }} className="mb-7" />
 
-        {/* Warning box */}
-        <div
-          className="mb-8 flex gap-3 rounded-xl border px-4 py-3.5"
-          style={{ borderColor: "#f6c660", backgroundColor: "#fef9ec" }}
-        >
-          <AlertTriangle size={18} className="shrink-0 mt-0.5" style={{ color: "#b07d10" }} />
-          <p className="text-sm leading-relaxed" style={{ color: "#7a5900" }}>
-            <strong>{t.warningTitle}</strong>{" "}
-            {t.warningBody}
-          </p>
-        </div>
+        {/* Disclaimer lives in the footer */}
 
         {/* ── Filters ── */}
         <div className="mb-7 flex flex-col gap-3">
@@ -132,7 +120,7 @@ export default function Home() {
                   : { backgroundColor: "transparent", borderColor: "var(--border)", color: "var(--muted)" }
               }
             >
-              🟢 {t.openNow}
+              {t.openNow}
             </button>
           </div>
 
@@ -155,9 +143,9 @@ export default function Home() {
           <div className="flex items-center gap-2">
             <span
               className="rounded-full px-2.5 py-1 text-xs font-semibold"
-              style={{ backgroundColor: "#e6f4ea", color: "#2d6a4f" }}
+              style={{ backgroundColor: "#dcfce7", color: "#15803d" }}
             >
-              ✓ Direct delivery
+              {lang === "he" ? "משלוח ישיר" : "Direct delivery"}
             </span>
             {/* List / Map toggle */}
             <div className="flex overflow-hidden rounded-full border" style={{ borderColor: "var(--border)" }}>
@@ -234,7 +222,7 @@ export default function Home() {
         {/* Suggest footer */}
         <div
           className="mt-8 rounded-2xl border border-dashed p-6 text-center"
-          style={{ borderColor: "var(--border)", backgroundColor: "rgba(255,255,255,0.4)" }}
+          style={{ borderColor: "var(--border)", backgroundColor: "#fafafa" }}
         >
           <p className="text-sm font-medium" style={{ color: "var(--muted)" }}>
             {t.suggestTitle}
@@ -260,13 +248,16 @@ export default function Home() {
         </div>
       </main>
 
-      <footer className="mt-6 border-t py-6 text-center text-xs" style={{ borderColor: "var(--border)", color: "#9c8060" }}>
+      <footer className="mt-6 border-t py-6 text-center text-xs" style={{ borderColor: "var(--border)", color: "#9ca3af" }}>
+        <p className="mx-auto mb-2 max-w-xl leading-relaxed" style={{ color: "#9ca3af" }}>
+          {t.warningTitle} {t.warningBody}
+        </p>
         <a
           href="https://x.com/OhayonUri/status/2069847066633818318"
           target="_blank"
           rel="noopener noreferrer"
           className="hover:underline"
-          style={{ color: "#9c8060" }}
+          style={{ color: "#9ca3af" }}
         >
           Yashir · ישיר - הסיפור מאחורי הפרויקט
         </a>

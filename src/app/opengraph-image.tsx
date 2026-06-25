@@ -24,7 +24,7 @@ export default function OGImage() {
           style={{
             width: "80px",
             height: "5px",
-            backgroundColor: "#c4421a",
+            backgroundColor: "#15803d",
             marginBottom: "40px",
             borderRadius: "2px",
           }}
@@ -56,7 +56,7 @@ export default function OGImage() {
         <div
           style={{
             fontSize: "24px",
-            color: "#c4421a",
+            color: "#15803d",
             letterSpacing: "1px",
           }}
         >

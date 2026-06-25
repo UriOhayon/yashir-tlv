@@ -63,7 +63,7 @@ export default async function CuisinePage({
 
       <header
         className="sticky top-0 z-10 backdrop-blur-sm"
-        style={{ borderBottom: "1px solid var(--border)", backgroundColor: "rgba(245, 237, 224, 0.92)" }}
+        style={{ borderBottom: "1px solid var(--border)", backgroundColor: "rgba(255, 255, 255, 0.85)" }}
       >
         <div className="mx-auto flex max-w-3xl items-center justify-between px-5 py-3">
           <Link href="/" className="font-serif text-base font-bold" style={{ color: "var(--ink)", fontFamily: "var(--font-serif)" }}>
@@ -122,8 +122,8 @@ export default async function CuisinePage({
         </section>
       </main>
 
-      <footer className="mt-6 border-t py-6 text-center text-xs" style={{ borderColor: "var(--border)", color: "#9c8060" }}>
-        <a href="https://x.com/OhayonUri" target="_blank" rel="noopener noreferrer" className="hover:underline" style={{ color: "#9c8060" }}>ישיר · Yashir - משלוח ישיר ממסעדות תל אביב</a>
+      <footer className="mt-6 border-t py-6 text-center text-xs" style={{ borderColor: "var(--border)", color: "#9ca3af" }}>
+        <a href="https://x.com/OhayonUri" target="_blank" rel="noopener noreferrer" className="hover:underline" style={{ color: "#9ca3af" }}>ישיר · Yashir - משלוח ישיר ממסעדות תל אביב</a>
       </footer>
     </div>
   );
