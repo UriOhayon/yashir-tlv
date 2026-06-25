@@ -115,3 +115,14 @@ export const strings = {
       'gluten-free': 'ללא גלוטן',
       halal: 'חלאל',
       kosher: 'כשר',
+    },
+    platformLabels: {
+      tabit: 'טאביט',
+      nibble: 'ניבל',
+      proprietary: 'אתר עצמי',
+      'phone-only': 'טלפון',
+    },
+  },
+} as const;
+
+export type Strings = (typeof strings)[Lang];

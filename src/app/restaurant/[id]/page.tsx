@@ -181,4 +181,8 @@ export default async function RestaurantPage({
 function Fact({ label, value }: { label: string; value: string }) {
   return (
     <div className="rounded-xl px-3 py-2.5" style={{ backgroundColor: "rgba(255,255,255,0.6)", border: "1px solid var(--border)" }}>
-      <div className="text-[10px] uppercase tracking-wide" style={{ color: "var(--muted)", opacity: 
+      <div className="text-[10px] uppercase tracking-wide" style={{ color: "var(--muted)", opacity: 0.7 }}>{label}</div>
+      <div className="mt-0.5 text-sm font-semibold" style={{ color: "var(--ink)" }}>{value}</div>
+    </div>
+  );
+}

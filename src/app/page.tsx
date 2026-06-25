@@ -260,4 +260,17 @@ export default function Home() {
         </div>
       </main>
 
-      <footer cl
+      <footer className="mt-6 border-t py-6 text-center text-xs" style={{ borderColor: "var(--border)", color: "#9c8060" }}>
+        <a
+          href="https://x.com/OhayonUri/status/2069847066633818318"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:underline"
+          style={{ color: "#9c8060" }}
+        >
+          Yashir · ישיר - הסיפור מאחורי הפרויקט
+        </a>
+      </footer>
+    </div>
+  );
+}
