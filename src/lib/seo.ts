@@ -1,7 +1,7 @@
 import type { Restaurant, CuisineType, WeeklySchedule } from "@/types/restaurant";
 import { strings } from "@/i18n/strings";
 
-export const BASE_URL = "https://yashir-tlv.vercel.app";
+export const BASE_URL = "https://yashirdelivery.com";
 
 // Hebrew labels reused from the i18n table so SEO copy stays consistent.
 export const cuisineHe = strings.he.cuisineLabels;

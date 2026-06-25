@@ -15,7 +15,7 @@ const inter = Inter({
   display: "swap",
 });
 
-const BASE_URL = "https://yashir-tlv.vercel.app";
+const BASE_URL = "https://yashirdelivery.com";
 
 export const metadata: Metadata = {
   title: {
