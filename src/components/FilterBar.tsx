@@ -11,7 +11,6 @@ const CUISINE_OPTIONS: CuisineType[] = [
   "burger",
   "mediterranean",
   "middle-eastern",
-  "vegan",
   "italian",
   "mexican",
   "greek",
