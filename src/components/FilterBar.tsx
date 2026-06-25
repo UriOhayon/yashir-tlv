@@ -1,5 +1,7 @@
 "use client";
 
+import { ChevronDown } from "lucide-react";
+import { restaurants } from "@/data/restaurants";
 import type { CuisineType, DietaryTag } from "@/types/restaurant";
 import type { Strings } from "@/i18n/strings";
 
@@ -23,6 +25,14 @@ const DIETARY_OPTIONS: DietaryTag[] = [
   "halal",
   "kosher",
 ];
+
+const AVAILABLE_CUISINES = CUISINE_OPTIONS.filter((c) =>
+  restaurants.some((r) => r.cuisineType === c)
+);
+const AVAILABLE_DIETARY = DIETARY_OPTIONS.filter((tag) =>
+  restaurants.some((r) => r.dietaryTags.includes(tag))
+);
+const HAS_HEVER = restaurants.some((r) => r.acceptsHever);
 
 interface Props {
   cuisineFilter: CuisineType | "all";
@@ -71,26 +81,29 @@ export default function FilterBar({
       </button>
 
       {/* Cuisine select */}
-      <select
-        value={cuisineFilter}
-        onChange={(e) => setCuisineFilter(e.target.value as CuisineType | "all")}
-        className="rounded-full border px-3 py-1.5 text-xs font-normal focus:outline-none"
-        style={{
-          borderColor: "#cbcbc8",
-          backgroundColor: "#ffffff",
-          color: "var(--muted)",
-        }}
-      >
-        <option value="all">{t.allCuisines}</option>
-        {CUISINE_OPTIONS.map((c) => (
-          <option key={c} value={c}>
-            {t.cuisineLabels[c]}
-          </option>
-        ))}
-      </select>
+      <div className="relative">
+        <select
+          value={cuisineFilter}
+          onChange={(e) => setCuisineFilter(e.target.value as CuisineType | "all")}
+          className="appearance-none rounded-full border py-1.5 pl-7 pr-3 text-xs font-normal focus:outline-none"
+          style={{ borderColor: "#cbcbc8", backgroundColor: "#ffffff", color: "var(--muted)" }}
+        >
+          <option value="all">{t.allCuisines}</option>
+          {AVAILABLE_CUISINES.map((c) => (
+            <option key={c} value={c}>
+              {t.cuisineLabels[c]}
+            </option>
+          ))}
+        </select>
+        <ChevronDown
+          size={13}
+          className="pointer-events-none absolute left-2 top-1/2 -translate-y-1/2"
+          style={{ color: "var(--muted)" }}
+        />
+      </div>
 
       {/* Dietary chips */}
-      {DIETARY_OPTIONS.map((tag) => {
+      {AVAILABLE_DIETARY.map((tag) => {
         const active = dietaryFilters.includes(tag);
         return (
           <button
@@ -109,17 +122,19 @@ export default function FilterBar({
       })}
 
       {/* Hever chip */}
-      <button
-        onClick={() => setHeverFilter(!heverFilter)}
-        className="rounded-full border px-3 py-1.5 text-xs font-normal transition"
-        style={
-          heverFilter
-            ? { borderColor: "var(--brand)", backgroundColor: "rgba(21,128,61,0.08)", color: "var(--brand)" }
-            : { borderColor: "#cbcbc8", backgroundColor: "#ffffff", color: "var(--muted)" }
-        }
-      >
-        {t.heverFilter}
-      </button>
+      {HAS_HEVER && (
+        <button
+          onClick={() => setHeverFilter(!heverFilter)}
+          className="rounded-full border px-3 py-1.5 text-xs font-normal transition"
+          style={
+            heverFilter
+              ? { borderColor: "var(--brand)", backgroundColor: "rgba(21,128,61,0.08)", color: "var(--brand)" }
+              : { borderColor: "#cbcbc8", backgroundColor: "#ffffff", color: "var(--muted)" }
+          }
+        >
+          {t.heverFilter}
+        </button>
+      )}
     </div>
   );
 }

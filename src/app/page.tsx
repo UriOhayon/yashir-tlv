@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from "react";
 import dynamic from "next/dynamic";
-import { Store, List, Map } from "lucide-react";
+import { Store, List, Map, MessageCircle, BookOpen } from "lucide-react";
 import { restaurants } from "@/data/restaurants";
 import { strings } from "@/i18n/strings";
 import type { Lang } from "@/i18n/strings";
@@ -174,32 +174,36 @@ export default function Home() {
         )}
 
 
-        {/* Suggest footer */}
+        {/* Suggest / contact */}
         <div
-          className="mt-8 rounded-2xl border border-dashed p-6 text-center"
-          style={{ borderColor: "var(--border)", backgroundColor: "#fafafa" }}
+          className="mt-10 rounded-2xl border p-7 text-center"
+          style={{ borderColor: "var(--border)", backgroundColor: "#ffffff" }}
         >
-          <p className="text-sm font-medium" style={{ color: "var(--muted)" }}>
+          <p className="text-sm" style={{ color: "var(--muted)" }}>
             {t.suggestTitle}
           </p>
-          <a
-            href="https://x.com/OhayonUri"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-2 inline-block text-sm font-semibold hover:underline"
-            style={{ color: "var(--brand)" }}
-          >
-            {t.suggestLink}
-          </a>
-          <a
-            href="https://x.com/OhayonUri/status/2069847066633818318"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-2 block text-sm font-semibold hover:underline"
-            style={{ color: "var(--brand)" }}
-          >
-            {t.storyLink}
-          </a>
+          <div className="mt-4 flex flex-wrap items-center justify-center gap-3">
+            <a
+              href="https://x.com/OhayonUri"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-normal transition hover:opacity-80"
+              style={{ borderColor: "#cbcbc8", color: "var(--ink)" }}
+            >
+              <MessageCircle size={15} style={{ color: "var(--brand)" }} />
+              {t.suggestLink}
+            </a>
+            <a
+              href="https://x.com/OhayonUri/status/2069847066633818318"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-normal transition hover:opacity-80"
+              style={{ borderColor: "#cbcbc8", color: "var(--ink)" }}
+            >
+              <BookOpen size={15} style={{ color: "var(--brand)" }} />
+              {t.storyLink}
+            </a>
+          </div>
         </div>
       </main>
 
