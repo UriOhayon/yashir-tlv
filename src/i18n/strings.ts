@@ -6,10 +6,10 @@ export const strings = {
     siteTitleHe: 'ישיר',
     location: 'Tel Aviv–Yafo',
     tagline:
-      "Order straight from Tel Aviv kitchens that keep their own drivers — no middlemen, no commissions, often cheaper.",
+      "Order straight from Tel Aviv kitchens that keep their own drivers - no middlemen, no commissions, often cheaper.",
     warningTitle: 'For guidance only.',
     warningBody:
-      "Data may be outdated — always confirm with the restaurant before ordering. Dietary tags are not medical advice. Yashir makes no warranties and accepts no liability for any decisions made based on this information.",
+      "Data may be outdated - always confirm with the restaurant before ordering. Dietary tags are not medical advice. Yashir makes no warranties and accepts no liability for any decisions made based on this information.",
     openNow: 'Open Now',
     statsLabel: (count: number) => `${count} restaurants · Direct delivery`,
     searchPlaceholder: 'Search restaurants…',
@@ -67,10 +67,10 @@ export const strings = {
     siteTitleHe: 'Yashir',
     location: 'תל אביב–יפו',
     tagline:
-      'הזמינו ישירות ממסעדות תל אביב שמשלחות בעצמן — בלי מתווכים, בלי עמלות, ולרוב גם זול יותר.',
+      'הזמינו ישירות ממסעדות תל אביב שמשלחות בעצמן - בלי מתווכים, בלי עמלות, ולרוב גם זול יותר.',
     warningTitle: 'למטרת הכוונה בלבד.',
     warningBody:
-      'המידע עשוי להיות לא מעודכן — אמתו ישירות מול המסעדה לפני הזמנה. תגיות תזונה אינן ייעוץ רפואי. ישיר אינו מתחייב לדיוק ואינו אחראי לכל החלטה שתתקבל על סמך המידע.',
+      'המידע עשוי להיות לא מעודכן - אמתו ישירות מול המסעדה לפני הזמנה. תגיות תזונה אינן ייעוץ רפואי. ישיר אינו מתחייב לדיוק ואינו אחראי לכל החלטה שתתקבל על סמך המידע.',
     openNow: 'פתוח עכשיו',
     statsLabel: (count: number) => `${count} מסעדות · משלוח ישיר`,
     searchPlaceholder: 'חיפוש מסעדות…',
@@ -90,7 +90,7 @@ export const strings = {
     noResults: 'לא נמצאו מסעדות מתאימות.',
     noResultsSub: 'נסה לשנות את החיפוש או להסיר סינון.',
     suggestTitle: 'יודע על מסעדה שפספסנו? רוצה להגיד משהו?',
-    suggestLink: 'דברו איתי — להציע מסעדה או כל דבר ←',
+    suggestLink: 'דברו איתי - להציע מסעדה או כל דבר ←',
     storyLink: 'הסיפור שמאחורי הפרויקט ←',
     platformLabel: 'הזמנות דרך',
     heverFilter: 'כרטיס חבר',
@@ -115,14 +115,3 @@ export const strings = {
       'gluten-free': 'ללא גלוטן',
       halal: 'חלאל',
       kosher: 'כשר',
-    },
-    platformLabels: {
-      tabit: 'טאביט',
-      nibble: 'ניבל',
-      proprietary: 'אתר עצמי',
-      'phone-only': 'טלפון',
-    },
-  },
-} as const;
-
-export type Strings = (typeof strings)[Lang];

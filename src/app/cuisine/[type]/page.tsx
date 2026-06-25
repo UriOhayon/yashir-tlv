@@ -30,8 +30,8 @@ export async function generateMetadata({
   const { type } = await params;
   if (!isCuisine(type)) return {};
   const label = cuisineHe[type];
-  const title = `משלוח ${label} בתל אביב — מסעדות שמשלחות בעצמן | ישיר`;
-  const description = `מסעדות ${label} בתל אביב עם משלוח עצמאי — הזמנה ישירה מהאתר של המסעדה, בלי אפליקציות ובלי מתווכים. סינון לפי שעות פתיחה, מינימום הזמנה ודמי משלוח.`;
+  const title = `משלוח ${label} בתל אביב - מסעדות שמשלחות בעצמן | ישיר`;
+  const description = `מסעדות ${label} בתל אביב עם משלוח עצמאי - הזמנה ישירה מהאתר של המסעדה, בלי אפליקציות ובלי מתווכים. סינון לפי שעות פתיחה, מינימום הזמנה ודמי משלוח.`;
   const url = `${BASE_URL}/cuisine/${type}`;
   return {
     title,
@@ -87,7 +87,7 @@ export default async function CuisinePage({
         </h1>
         <p className="mt-3 max-w-xl text-base leading-relaxed" style={{ color: "var(--muted)" }}>
           {list.length} מסעדות {label} בתל אביב שמשלחות בעצמן. כל הזמנה הולכת ישירות
-          לאתר של המסעדה — בלי אפליקציות, בלי מתווכים, ולרוב גם זול יותר.
+          לאתר של המסעדה - בלי אפליקציות, בלי מתווכים, ולרוב גם זול יותר.
         </p>
 
         <div className="mt-7 grid gap-4 sm:grid-cols-2">
@@ -123,8 +123,4 @@ export default async function CuisinePage({
       </main>
 
       <footer className="mt-6 border-t py-6 text-center text-xs" style={{ borderColor: "var(--border)", color: "#9c8060" }}>
-        <a href="https://x.com/OhayonUri" target="_blank" rel="noopener noreferrer" className="hover:underline" style={{ color: "#9c8060" }}>ישיר · Yashir — משלוח ישיר ממסעדות תל אביב</a>
-      </footer>
-    </div>
-  );
-}
+        <a href="https://x.com/OhayonUri" target="_blank" rel="noopener noreferrer" className="hover:underline" st

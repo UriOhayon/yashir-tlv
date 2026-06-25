@@ -29,8 +29,8 @@ export async function generateMetadata({
   const { id } = await params;
   const r = get(id);
   if (!r) return {};
-  const title = `${r.nameHe} — משלוח ישיר ב${r.neighborhood} | ישיר`;
-  const description = `הזמינו ישירות מ${r.nameHe} (${cuisineHe[r.cuisineType]}) ב${r.neighborhood}, תל אביב. מינימום ₪${r.minOrderILS}, משלוח ${feeLabel(r.deliveryFeeILS)}, כ-${r.estimatedDeliveryMin} דק׳. הזמנה ישירה מהאתר של המסעדה — בלי אפליקציות ובלי מתווכים.`;
+  const title = `${r.nameHe} - משלוח ישיר ב${r.neighborhood} | ישיר`;
+  const description = `הזמינו ישירות מ${r.nameHe} (${cuisineHe[r.cuisineType]}) ב${r.neighborhood}, תל אביב. מינימום ₪${r.minOrderILS}, משלוח ${feeLabel(r.deliveryFeeILS)}, כ-${r.estimatedDeliveryMin} דק׳. הזמנה ישירה מהאתר של המסעדה - בלי אפליקציות ובלי מתווכים.`;
   const url = `${BASE_URL}/restaurant/${r.id}`;
   return {
     title,
@@ -172,7 +172,7 @@ export default async function RestaurantPage({
       </main>
 
       <footer className="mt-6 border-t py-6 text-center text-xs" style={{ borderColor: "var(--border)", color: "#9c8060" }}>
-        <a href="https://x.com/OhayonUri" target="_blank" rel="noopener noreferrer" className="hover:underline" style={{ color: "#9c8060" }}>ישיר · Yashir — משלוח ישיר ממסעדות תל אביב</a>
+        <a href="https://x.com/OhayonUri" target="_blank" rel="noopener noreferrer" className="hover:underline" style={{ color: "#9c8060" }}>ישיר · Yashir - משלוח ישיר ממסעדות תל אביב</a>
       </footer>
     </div>
   );
@@ -181,8 +181,4 @@ export default async function RestaurantPage({
 function Fact({ label, value }: { label: string; value: string }) {
   return (
     <div className="rounded-xl px-3 py-2.5" style={{ backgroundColor: "rgba(255,255,255,0.6)", border: "1px solid var(--border)" }}>
-      <div className="text-[10px] uppercase tracking-wide" style={{ color: "var(--muted)", opacity: 0.7 }}>{label}</div>
-      <div className="mt-0.5 text-sm font-semibold" style={{ color: "var(--ink)" }}>{value}</div>
-    </div>
-  );
-}
+      <div className="text-[10px] uppercase tracking-wide" style={{ color: "var(--muted)", opacity: 

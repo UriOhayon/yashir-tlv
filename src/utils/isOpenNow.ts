@@ -45,7 +45,7 @@ export function isOpenNow(schedule: WeeklySchedule): boolean {
     // Normal same-day range, e.g. 12:00–23:00
     return currentMinutes >= openMinutes && currentMinutes < closeMinutes;
   } else {
-    // Crosses midnight, e.g. 20:00–00:30 — open now OR early morning before close
+    // Crosses midnight, e.g. 20:00–00:30 - open now OR early morning before close
     return currentMinutes >= openMinutes || currentMinutes < closeMinutes;
   }
 }

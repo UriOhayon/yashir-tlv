@@ -205,7 +205,7 @@ export default function Home() {
           </div>
         )}
 
-        {/* Browse by cuisine — internal links for users + crawlers */}
+        {/* Browse by cuisine - internal links for users + crawlers */}
         <nav className="mt-12">
           <p className="mb-3 text-sm font-medium" style={{ color: "var(--muted)" }}>
             {lang === "he" ? "עיון לפי מטבח" : "Browse by cuisine"}
@@ -260,17 +260,4 @@ export default function Home() {
         </div>
       </main>
 
-      <footer className="mt-6 border-t py-6 text-center text-xs" style={{ borderColor: "var(--border)", color: "#9c8060" }}>
-        <a
-          href="https://x.com/OhayonUri/status/2069847066633818318"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:underline"
-          style={{ color: "#9c8060" }}
-        >
-          Yashir · ישיר — הסיפור מאחורי הפרויקט
-        </a>
-      </footer>
-    </div>
-  );
-}
+      <footer cl

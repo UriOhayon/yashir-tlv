@@ -4,9 +4,9 @@ import { restaurants } from "@/data/restaurants";
 import { BASE_URL, itemListJsonLd } from "@/lib/seo";
 import SeoRestaurantCard from "@/components/SeoRestaurantCard";
 
-const title = "משלוח פתוח עכשיו בתל אביב — מסעדות שמשלחות בעצמן | ישיר";
+const title = "משלוח פתוח עכשיו בתל אביב - מסעדות שמשלחות בעצמן | ישיר";
 const description =
-  "מסעדות בתל אביב שמשלחות בעצמן ופתוחות עכשיו. בדקו שעות פעילות והזמינו ישירות מהאתר של המסעדה — בלי אפליקציות ובלי מתווכים.";
+  "מסעדות בתל אביב שמשלחות בעצמן ופתוחות עכשיו. בדקו שעות פעילות והזמינו ישירות מהאתר של המסעדה - בלי אפליקציות ובלי מתווכים.";
 
 export const metadata: Metadata = {
   title,
@@ -59,8 +59,4 @@ export default function OpenNowPage() {
       </main>
 
       <footer className="mt-6 border-t py-6 text-center text-xs" style={{ borderColor: "var(--border)", color: "#9c8060" }}>
-        <a href="https://x.com/OhayonUri" target="_blank" rel="noopener noreferrer" className="hover:underline" style={{ color: "#9c8060" }}>ישיר · Yashir — משלוח ישיר ממסעדות תל אביב</a>
-      </footer>
-    </div>
-  );
-}
+        <a href="https://x.com/OhayonUri" target="_blank" rel="noopener noreferrer" className="hover:underline" st
