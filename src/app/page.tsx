@@ -2,7 +2,6 @@
 
 import { useState, useMemo } from "react";
 import dynamic from "next/dynamic";
-import Link from "next/link";
 import { Store, List, Map } from "lucide-react";
 import { restaurants } from "@/data/restaurants";
 import { strings } from "@/i18n/strings";
@@ -174,24 +173,6 @@ export default function Home() {
           </div>
         )}
 
-        {/* Browse by cuisine - internal links for users + crawlers */}
-        <nav className="mt-12">
-          <p className="mb-3 text-sm font-medium" style={{ color: "var(--muted)" }}>
-            {lang === "he" ? "עיון לפי מטבח" : "Browse by cuisine"}
-          </p>
-          <div className="flex flex-wrap gap-2">
-            {Array.from(new Set(restaurants.map((r) => r.cuisineType))).map((c) => (
-              <Link
-                key={c}
-                href={`/cuisine/${c}`}
-                className="rounded-full border px-3 py-1.5 text-xs font-semibold transition hover:opacity-70"
-                style={{ borderColor: "var(--border)", color: "var(--muted)" }}
-              >
-                {t.cuisineLabels[c]}
-              </Link>
-            ))}
-          </div>
-        </nav>
 
         {/* Suggest footer */}
         <div

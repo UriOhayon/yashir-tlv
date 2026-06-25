@@ -60,11 +60,11 @@ export default function FilterBar({
       {/* Open now */}
       <button
         onClick={() => setOpenNow(!openNow)}
-        className="rounded-full border px-3 py-1.5 text-xs font-medium transition"
+        className="rounded-full border px-3 py-1.5 text-xs font-normal transition"
         style={
           openNow
             ? { borderColor: "var(--brand)", backgroundColor: "rgba(21,128,61,0.08)", color: "var(--brand)" }
-            : { borderColor: "var(--border)", backgroundColor: "#ffffff", color: "var(--muted)" }
+            : { borderColor: "#cbcbc8", backgroundColor: "#ffffff", color: "var(--muted)" }
         }
       >
         {t.openNow}
@@ -74,9 +74,9 @@ export default function FilterBar({
       <select
         value={cuisineFilter}
         onChange={(e) => setCuisineFilter(e.target.value as CuisineType | "all")}
-        className="rounded-full border px-3 py-1.5 text-xs font-medium focus:outline-none"
+        className="rounded-full border px-3 py-1.5 text-xs font-normal focus:outline-none"
         style={{
-          borderColor: "var(--border)",
+          borderColor: "#cbcbc8",
           backgroundColor: "#ffffff",
           color: "var(--muted)",
         }}
@@ -96,11 +96,11 @@ export default function FilterBar({
           <button
             key={tag}
             onClick={() => toggleDietary(tag)}
-            className="rounded-full border px-3 py-1.5 text-xs font-medium transition"
+            className="rounded-full border px-3 py-1.5 text-xs font-normal transition"
             style={
               active
                 ? { borderColor: "var(--brand)", backgroundColor: "rgba(21,128,61,0.08)", color: "var(--brand)" }
-                : { borderColor: "var(--border)", backgroundColor: "#ffffff", color: "var(--muted)" }
+                : { borderColor: "#cbcbc8", backgroundColor: "#ffffff", color: "var(--muted)" }
             }
           >
             {t.dietaryLabels[tag]}
@@ -111,11 +111,11 @@ export default function FilterBar({
       {/* Hever chip */}
       <button
         onClick={() => setHeverFilter(!heverFilter)}
-        className="rounded-full border px-3 py-1.5 text-xs font-semibold transition"
+        className="rounded-full border px-3 py-1.5 text-xs font-normal transition"
         style={
           heverFilter
             ? { borderColor: "var(--brand)", backgroundColor: "rgba(21,128,61,0.08)", color: "var(--brand)" }
-            : { borderColor: "var(--border)", backgroundColor: "#ffffff", color: "var(--muted)" }
+            : { borderColor: "#cbcbc8", backgroundColor: "#ffffff", color: "var(--muted)" }
         }
       >
         {t.heverFilter}
