@@ -73,12 +73,11 @@ export default function AboutPage() {
           >
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <span
-                  className="flex h-11 w-11 items-center justify-center rounded-full text-sm font-bold text-white"
-                  style={{ backgroundColor: "var(--brand)" }}
-                >
-                  UO
-                </span>
+                <img
+                  src="/profile.jpg"
+                  alt="אורי אוחיון"
+                  className="h-11 w-11 rounded-full object-cover"
+                />
                 <div>
                   <div className="text-sm font-semibold" style={{ color: "var(--ink)" }}>
                     אורי אוחיון
@@ -105,7 +104,7 @@ export default function AboutPage() {
               מהשטח. 🧵
             </p>
             <div className="mt-3 text-xs font-medium" style={{ color: "var(--brand)" }}>
-              צפו בשרשור המלא ב-X ←
+              צפו בשרשור המלא ב-X
             </div>
           </a>
         </div>
