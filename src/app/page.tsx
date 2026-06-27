@@ -2,7 +2,8 @@
 
 import { useState, useMemo } from "react";
 import dynamic from "next/dynamic";
-import { Store, List, Map, MessageCircle, BookOpen } from "lucide-react";
+import Link from "next/link";
+import { Store, List, Map, MessageCircle, BookOpen, Mail } from "lucide-react";
 import { restaurants } from "@/data/restaurants";
 import { strings } from "@/i18n/strings";
 import type { Lang } from "@/i18n/strings";
@@ -184,6 +185,22 @@ export default function Home() {
           </p>
           <div className="mt-4 flex flex-wrap items-center justify-center gap-3">
             <a
+              href="mailto:urioha@gmail.com"
+              className="inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-normal transition hover:opacity-80"
+              style={{ borderColor: "#cbcbc8", color: "var(--ink)" }}
+            >
+              <Mail size={15} style={{ color: "var(--brand)" }} />
+              urioha@gmail.com
+            </a>
+            <Link
+              href="/about"
+              className="inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-normal transition hover:opacity-80"
+              style={{ borderColor: "#cbcbc8", color: "var(--ink)" }}
+            >
+              <BookOpen size={15} style={{ color: "var(--brand)" }} />
+              {t.storyLink}
+            </Link>
+            <a
               href="https://x.com/OhayonUri"
               target="_blank"
               rel="noopener noreferrer"
@@ -191,17 +208,7 @@ export default function Home() {
               style={{ borderColor: "#cbcbc8", color: "var(--ink)" }}
             >
               <MessageCircle size={15} style={{ color: "var(--brand)" }} />
-              {t.suggestLink}
-            </a>
-            <a
-              href="https://x.com/OhayonUri/status/2069847066633818318"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-normal transition hover:opacity-80"
-              style={{ borderColor: "#cbcbc8", color: "var(--ink)" }}
-            >
-              <BookOpen size={15} style={{ color: "var(--brand)" }} />
-              {t.storyLink}
+              X · @OhayonUri
             </a>
           </div>
         </div>
@@ -211,15 +218,9 @@ export default function Home() {
         <p className="mx-auto mb-2 max-w-xl leading-relaxed" style={{ color: "#9ca3af" }}>
           {t.warningTitle} {t.warningBody}
         </p>
-        <a
-          href="https://x.com/OhayonUri/status/2069847066633818318"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:underline"
-          style={{ color: "#9ca3af" }}
-        >
+        <Link href="/about" className="hover:underline" style={{ color: "#9ca3af" }}>
           Yashir · ישיר - הסיפור מאחורי הפרויקט
-        </a>
+        </Link>
       </footer>
     </div>
   );
