@@ -12,6 +12,7 @@ import {
   Phone,
   Tag,
 } from "lucide-react";
+import { track } from "@vercel/analytics";
 import type { Restaurant, DietaryTag } from "@/types/restaurant";
 import type { Lang, Strings } from "@/i18n/strings";
 
@@ -157,6 +158,7 @@ export default function RestaurantCard({ restaurant: r, lang, t }: Props) {
             href={r.website}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => track("order_click", { restaurant: r.id, name: r.name })}
             className="flex items-center gap-1 rounded-full px-3 py-1.5 text-xs font-semibold text-white transition hover:opacity-85 active:scale-95"
             style={{ backgroundColor: "var(--brand)" }}
           >
