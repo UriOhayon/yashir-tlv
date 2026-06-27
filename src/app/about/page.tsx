@@ -139,8 +139,10 @@ export default function AboutPage() {
         </div>
       </main>
 
-      <footer className="mt-6 border-t py-6 text-center text-xs" style={{ borderColor: "var(--border)", color: "#9ca3af" }}>
-        <span>ישיר · Yashir - משלוח ישיר ממסעדות תל אביב</span>
+      <footer className="mt-6 border-t py-6 text-center text-xs" style={{ borderColor: "var(--border)", color: "#595959" }}>
+        <Link href="/accessibility" className="hover:underline" style={{ color: "#595959" }}>
+          נגישות
+        </Link>
       </footer>
     </div>
   );
