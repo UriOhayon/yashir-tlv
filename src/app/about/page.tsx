@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Mail } from "lucide-react";
+import { Mail, Check } from "lucide-react";
 import { BASE_URL } from "@/lib/seo";
 
 const title = "הסיפור שמאחורי ישיר | משלוח ישיר ממסעדות תל אביב";
@@ -36,80 +36,99 @@ export default function AboutPage() {
           הסיפור שמאחורי ישיר
         </h1>
 
-        <div className="mt-6 space-y-5 text-base leading-relaxed" style={{ color: "var(--muted)" }}>
-          <p>
-            רובנו התרגלנו להזמין אוכל דרך האפליקציות, ושכחנו שיש דרך אחרת. אבל מאחורי כל הזמנה כזו
-            מסתתרת בעיה: על כל מנה, המסעדה מפרישה לפלטפורמה נתח גדול - עמלות שמגיעות לא פעם לעשרות
-            אחוזים. בסוף, גם אנחנו משלמים יותר, וגם המסעדות הקטנות נחנקות.
+        <article
+          className="mt-6 rounded-2xl border p-6 sm:p-8"
+          style={{ borderColor: "var(--border)", backgroundColor: "#ffffff" }}
+        >
+          <p className="text-lg leading-relaxed" style={{ color: "var(--ink)" }}>
+            רובנו התרגלנו להזמין אוכל דרך האפליקציות, ושכחנו שיש דרך אחרת.
           </p>
-          <p>
-            בניתי את ישיר לבד, בזמני הפנוי, מתוך אמונה פשוטה שאפשר אחרת. ישיר
-            הוא אינדקס חינמי של מסעדות בתל אביב שמשלחות בעצמן - הוא פשוט מפנה אתכם להזמין ישירות מהאתר
-            של המסעדה. בלי מתווך, בלי עמלות שמנפחות את המחיר, ורוב הכסף נשאר במקום שאליו הוא צריך
-            להגיע: אצל המסעדה.
+
+          <div className="mt-4 space-y-4 text-base leading-relaxed" style={{ color: "var(--muted)" }}>
+            <p>
+              מאחורי כל הזמנה כזו מסתתרת בעיה: על כל מנה, המסעדה מפרישה לפלטפורמה נתח גדול - עמלות
+              שמגיעות לא פעם לעשרות אחוזים. בסוף, גם אנחנו משלמים יותר, וגם המסעדות הקטנות נחנקות.
+            </p>
+            <p>
+              בניתי את ישיר לבד, בזמני הפנוי, מתוך אמונה פשוטה שאפשר אחרת. ישיר הוא אינדקס חינמי של
+              מסעדות בתל אביב שמשלחות בעצמן - הוא פשוט מפנה אתכם להזמין ישירות מהאתר של המסעדה. בלי
+              מתווך, בלי עמלות שמנפחות את המחיר, ורוב הכסף נשאר במקום שאליו הוא צריך להגיע: אצל המסעדה.
+            </p>
+          </div>
+
+          <div className="my-6 border-t" style={{ borderColor: "var(--border)" }} />
+
+          <p className="font-medium" style={{ color: "var(--ink)" }}>
+            על הדרך גם גיליתי שזה פשוט עדיף - נוח יותר, משתלם יותר, וגם ערכי יותר:
           </p>
-          <p>
-            על הדרך גם גיליתי שזה פשוט עדיף - נוח יותר, משתלם יותר, וגם ערכי יותר. בין היתר:
-          </p>
-          <ul className="list-disc space-y-2 pr-5">
-            <li>הכסף הולך למסעדה, לא לאפליקציה</li>
-            <li>בעיה בהזמנה? מדברים עם בן אדם במסעדה, לא עם בוט</li>
-            <li>מהיר, בלי לבהות במפה ולעקוב אחרי השליח</li>
+          <ul className="mt-3 space-y-2.5 text-base" style={{ color: "var(--muted)" }}>
+            <li className="flex items-start gap-2.5">
+              <Check size={18} className="mt-0.5 shrink-0" style={{ color: "var(--brand)" }} aria-hidden="true" />
+              <span>הכסף הולך למסעדה, לא לאפליקציה</span>
+            </li>
+            <li className="flex items-start gap-2.5">
+              <Check size={18} className="mt-0.5 shrink-0" style={{ color: "var(--brand)" }} aria-hidden="true" />
+              <span>בעיה בהזמנה? מדברים עם בן אדם במסעדה, לא עם בוט</span>
+            </li>
+            <li className="flex items-start gap-2.5">
+              <Check size={18} className="mt-0.5 shrink-0" style={{ color: "var(--brand)" }} aria-hidden="true" />
+              <span>מהיר, בלי לבהות במפה ולעקוב אחרי השליח</span>
+            </li>
           </ul>
-          <p>
-            אני לא גובה שקל מאף אחד, וזו לא עוד פלטפורמת משלוחים. זה פרויקט אישי, מתוך רצון להחזיר
-            קצת הוגנות לדרך שבה אנחנו מזמינים אוכל - גם בשביל המסעדות, וגם בשבילנו.
-          </p>
-          <p>
-            אם יש מסעדה ששווה להוסיף, אם משהו לא עובד, או סתם בא לכם להגיד שלום - אשמח לשמוע. ואם בא
-            לכם לעזור לקדם את הפרויקט, אתם מוזמנים לפנות אליי.
-          </p>
-          <a
-            href="https://x.com/OhayonUri/status/2069847066633818318"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block rounded-2xl border p-5 transition hover:opacity-90"
-            style={{ borderColor: "var(--border)", backgroundColor: "#ffffff" }}
-          >
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-3">
-                <img
-                  src="/profile.jpg"
-                  alt="אורי אוחיון"
-                  className="h-11 w-11 rounded-full object-cover"
-                />
-                <div>
-                  <div className="text-sm font-semibold" style={{ color: "var(--ink)" }}>
-                    אורי אוחיון
-                  </div>
-                  <div className="text-xs" style={{ color: "var(--muted)" }}>
-                    @OhayonUri
-                  </div>
+
+          <div className="mt-6 space-y-4 text-base leading-relaxed" style={{ color: "var(--muted)" }}>
+            <p>
+              אני לא גובה שקל מאף אחד, וזו לא עוד פלטפורמת משלוחים. זה פרויקט אישי, מתוך רצון להחזיר
+              קצת הוגנות לדרך שבה אנחנו מזמינים אוכל - גם בשביל המסעדות, וגם בשבילנו.
+            </p>
+            <p>
+              אם יש מסעדה ששווה להוסיף, אם משהו לא עובד, או סתם בא לכם להגיד שלום - אשמח לשמוע. ואם בא
+              לכם לעזור לקדם את הפרויקט, אתם מוזמנים לפנות אליי.
+            </p>
+          </div>
+        </article>
+
+        <a
+          href="https://x.com/OhayonUri/status/2069847066633818318"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-6 block rounded-2xl border p-5 transition hover:opacity-90"
+          style={{ borderColor: "var(--border)", backgroundColor: "#ffffff" }}
+        >
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <img src="/profile.jpg" alt="אורי אוחיון" className="h-11 w-11 rounded-full object-cover" />
+              <div>
+                <div className="text-sm font-semibold" style={{ color: "var(--ink)" }}>
+                  אורי אוחיון
+                </div>
+                <div className="text-xs" style={{ color: "var(--muted)" }}>
+                  @OhayonUri
                 </div>
               </div>
-              <svg
-                viewBox="0 0 24 24"
-                width="18"
-                height="18"
-                fill="currentColor"
-                aria-hidden="true"
-                style={{ color: "var(--ink)" }}
-              >
-                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-              </svg>
             </div>
-            <p className="mt-3 text-sm leading-relaxed" style={{ color: "var(--ink)" }}>
-              לפני כמה שבועות השקתי כאן את ישיר. היום, בפעם הראשונה, חוויתי את המערכת כלקוח קצה - ולא
-              כמייסד. רוב התל-אביבים כבר זנחו לגמרי את האופציה להזמין ישירות ממסעדה. אז הנה תובנה
-              מהשטח. 🧵
-            </p>
-            <div className="mt-3 text-xs font-medium" style={{ color: "var(--brand)" }}>
-              צפו בשרשור המלא ב-X
-            </div>
-          </a>
-        </div>
+            <svg
+              viewBox="0 0 24 24"
+              width="18"
+              height="18"
+              fill="currentColor"
+              aria-hidden="true"
+              style={{ color: "var(--ink)" }}
+            >
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+            </svg>
+          </div>
+          <p className="mt-3 text-sm leading-relaxed" style={{ color: "var(--ink)" }}>
+            לפני כמה שבועות השקתי כאן את ישיר. היום, בפעם הראשונה, חוויתי את המערכת כלקוח קצה - ולא
+            כמייסד. רוב התל-אביבים כבר זנחו לגמרי את האופציה להזמין ישירות ממסעדה. אז הנה תובנה מהשטח.
+            🧵
+          </p>
+          <div className="mt-3 text-xs font-medium" style={{ color: "var(--brand)" }}>
+            צפו בשרשור המלא ב-X
+          </div>
+        </a>
 
-        <div className="mt-8 rounded-2xl border p-6" style={{ borderColor: "var(--border)", backgroundColor: "#ffffff" }}>
+        <div className="mt-6 rounded-2xl border p-6" style={{ borderColor: "var(--border)", backgroundColor: "#ffffff" }}>
           <p className="text-sm font-medium" style={{ color: "var(--ink)" }}>יצירת קשר</p>
           <div className="mt-3 flex flex-wrap gap-3">
             <a
@@ -117,7 +136,7 @@ export default function AboutPage() {
               className="inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm transition hover:opacity-80"
               style={{ borderColor: "#cbcbc8", color: "var(--ink)" }}
             >
-              <Mail size={15} style={{ color: "var(--brand)" }} />
+              <Mail size={15} style={{ color: "var(--brand)" }} aria-hidden="true" />
               urioha@gmail.com
             </a>
             <a
