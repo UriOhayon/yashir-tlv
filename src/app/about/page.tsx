@@ -64,17 +64,50 @@ export default function AboutPage() {
             אם יש מסעדה ששווה להוסיף, אם משהו לא עובד, או סתם בא לכם להגיד שלום - אשמח לשמוע. ואם בא
             לכם לעזור לקדם את הפרויקט, אתם מוזמנים לפנות אליי.
           </p>
-          <p>
-            <a
-              href="https://x.com/OhayonUri/status/2069847066633818318"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 font-medium hover:underline"
-              style={{ color: "var(--brand)" }}
-            >
-              לקריאה מורחבת - הציוץ המלא ←
-            </a>
-          </p>
+          <a
+            href="https://x.com/OhayonUri/status/2069847066633818318"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block rounded-2xl border p-5 transition hover:opacity-90"
+            style={{ borderColor: "var(--border)", backgroundColor: "#ffffff" }}
+          >
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                <span
+                  className="flex h-11 w-11 items-center justify-center rounded-full text-sm font-bold text-white"
+                  style={{ backgroundColor: "var(--brand)" }}
+                >
+                  UO
+                </span>
+                <div>
+                  <div className="text-sm font-semibold" style={{ color: "var(--ink)" }}>
+                    אורי אוחיון
+                  </div>
+                  <div className="text-xs" style={{ color: "var(--muted)" }}>
+                    @OhayonUri
+                  </div>
+                </div>
+              </div>
+              <svg
+                viewBox="0 0 24 24"
+                width="18"
+                height="18"
+                fill="currentColor"
+                aria-hidden="true"
+                style={{ color: "var(--ink)" }}
+              >
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              </svg>
+            </div>
+            <p className="mt-3 text-sm leading-relaxed" style={{ color: "var(--ink)" }}>
+              לפני כמה שבועות השקתי כאן את ישיר. היום, בפעם הראשונה, חוויתי את המערכת כלקוח קצה - ולא
+              כמייסד. רוב התל-אביבים כבר זנחו לגמרי את האופציה להזמין ישירות ממסעדה. אז הנה תובנה
+              מהשטח. 🧵
+            </p>
+            <div className="mt-3 text-xs font-medium" style={{ color: "var(--brand)" }}>
+              צפו בשרשור המלא ב-X ←
+            </div>
+          </a>
         </div>
 
         <div className="mt-8 rounded-2xl border p-6" style={{ borderColor: "var(--border)", backgroundColor: "#ffffff" }}>
