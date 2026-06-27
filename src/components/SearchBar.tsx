@@ -21,7 +21,8 @@ export default function SearchBar({ value, onChange, placeholder }: Props) {
         value={value}
         onChange={(e) => onChange(e.target.value)}
         placeholder={placeholder}
-        className="w-full rounded-xl border py-2.5 pl-9 pr-4 text-sm transition focus:outline-none focus:ring-2"
+        aria-label={placeholder}
+        className="w-full rounded-xl border py-2.5 pl-9 pr-4 text-sm transition focus:ring-2"
         style={{
           borderColor: "var(--border)",
           backgroundColor: "#ffffff",

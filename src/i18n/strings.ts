@@ -9,7 +9,7 @@ export const strings = {
       "Order straight from Tel Aviv kitchens that keep their own drivers - no middlemen, no commissions, often cheaper.",
     warningTitle: 'For guidance only.',
     warningBody:
-      "Data may be outdated - always confirm with the restaurant before ordering. Dietary tags are not medical advice. Yashir makes no warranties and accepts no liability for any decisions made based on this information.",
+      "Information is provided as a public service, 'as is', and may be incomplete or out of date. Prices, delivery fees, hours, coupon codes and dietary tags may change - verify every detail directly with the restaurant before ordering. Coupon codes and offers are subject to the restaurant's terms and are not guaranteed. Orders and payment are made directly with the restaurant and are its sole responsibility; Yashir is not a party to the transaction. Dietary tags are not medical advice. Yashir is not liable for any direct or indirect damage arising from use of the site, reliance on the information, or external links, to the maximum extent permitted by law.",
     openNow: 'Open Now',
     statsLabel: (count: number) => `${count} restaurants · Direct delivery`,
     searchPlaceholder: 'Search restaurants…',
@@ -70,7 +70,7 @@ export const strings = {
       'הזמינו ישירות ממסעדות שמשלחות בעצמן - בלי מתווכים, בלי עמלות, פשוט ונוח.',
     warningTitle: 'למטרת הכוונה בלבד.',
     warningBody:
-      'המידע עשוי להיות לא מעודכן - אמתו ישירות מול המסעדה לפני הזמנה. תגיות תזונה אינן ייעוץ רפואי. ישיר אינו מתחייב לדיוק ואינו אחראי לכל החלטה שתתקבל על סמך המידע.',
+      'המידע באתר ניתן כשירות לציבור, כמות שהוא (AS IS), ועשוי להיות חלקי או לא מעודכן. מחירים, דמי משלוח, שעות פעילות, קודי קופון ותגיות תזונה עשויים להשתנות - יש לאמת כל פרט ישירות מול המסעדה לפני הזמנה. קודי קופון והטבות כפופים לתנאי המסעדה ואינם מובטחים. ההזמנה והתשלום מתבצעים ישירות מול המסעדה ובאחריותה בלבד, וישיר אינו צד לעסקה. תגיות תזונה אינן ייעוץ רפואי. ישיר אינו אחראי לכל נזק, ישיר או עקיף, שייגרם משימוש באתר, מהסתמכות על המידע או מקישורים לאתרים חיצוניים, במידה המרבית המותרת בדין.',
     openNow: 'פתוח עכשיו',
     statsLabel: (count: number) => `${count} מסעדות · משלוח ישיר`,
     searchPlaceholder: 'חיפוש מסעדות…',

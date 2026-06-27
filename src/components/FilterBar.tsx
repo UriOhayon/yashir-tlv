@@ -84,7 +84,8 @@ export default function FilterBar({
         <select
           value={cuisineFilter}
           onChange={(e) => setCuisineFilter(e.target.value as CuisineType | "all")}
-          className="appearance-none rounded-full border py-1.5 pl-7 pr-3 text-xs font-normal focus:outline-none"
+          aria-label="סינון לפי מטבח"
+          className="appearance-none rounded-full border py-1.5 pl-7 pr-3 text-xs font-normal"
           style={{ borderColor: "#cbcbc8", backgroundColor: "#ffffff", color: "var(--muted)" }}
         >
           <option value="all">{t.allCuisines}</option>

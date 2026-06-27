@@ -214,13 +214,19 @@ export default function Home() {
         </div>
       </main>
 
-      <footer className="mt-6 border-t py-6 text-center text-xs" style={{ borderColor: "var(--border)", color: "#9ca3af" }}>
-        <p className="mx-auto mb-2 max-w-xl leading-relaxed" style={{ color: "#9ca3af" }}>
+      <footer className="mt-6 border-t py-6 text-center text-xs" style={{ borderColor: "var(--border)", color: "#595959" }}>
+        <p className="mx-auto mb-3 max-w-xl leading-relaxed" style={{ color: "#595959" }}>
           {t.warningTitle} {t.warningBody}
         </p>
-        <Link href="/about" className="hover:underline" style={{ color: "#9ca3af" }}>
-          Yashir · ישיר - הסיפור מאחורי הפרויקט
-        </Link>
+        <div className="flex flex-wrap items-center justify-center gap-2">
+          <Link href="/about" className="hover:underline" style={{ color: "#595959" }}>
+            הסיפור מאחורי הפרויקט
+          </Link>
+          <span aria-hidden="true">·</span>
+          <Link href="/accessibility" className="hover:underline" style={{ color: "#595959" }}>
+            נגישות
+          </Link>
+        </div>
       </footer>
     </div>
   );
