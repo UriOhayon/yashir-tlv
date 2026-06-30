@@ -364,7 +364,7 @@ export const restaurants: Restaurant[] = [
     orderingPlatform: "tabit",
     deliveryRadiusKm: 5,
     minOrderILS: 70,
-    deliveryFeeILS: 12,
+    deliveryFeeILS: 8,
     estimatedDeliveryMin: 30,
     operatingHours: "Sun–Thu 11:30–00:00, Fri 11:30–22:00, Sat 12:00–00:00",
     schedule: {
@@ -378,8 +378,8 @@ export const restaurants: Restaurant[] = [
     },
     dietaryTags: ["vegetarian-friendly"],
     phone: "03-310-4520",
-    lastVerified: "2026-06-05",
-    notes: "Fresh fried chicken, burgers and wings. Own Tabit ordering confirmed.",
+    lastVerified: "2026-06-27",
+    notes: "Fresh fried chicken, burgers and wings. Own Tabit ordering confirmed. 8% cashback for club members.",
     lat: 32.0847, lng: 34.7933,
   },
   {
