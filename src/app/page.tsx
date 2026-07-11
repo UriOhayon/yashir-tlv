@@ -63,7 +63,18 @@ export default function Home() {
           >
             Yashir · ישיר
           </span>
-          <LanguageToggle lang={lang} setLang={handleSetLang} />
+          <div className="flex items-center gap-2">
+            <Link
+              href="/about"
+              className="inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-xs font-semibold transition hover:opacity-70"
+              style={{ borderColor: "var(--border)", color: "var(--ink)", backgroundColor: "#ffffff" }}
+            >
+              <BookOpen size={13} style={{ color: "var(--brand)" }} />
+              <span className="hidden sm:inline">{t.storyLink}</span>
+              <span className="sm:hidden">{t.storyLinkShort}</span>
+            </Link>
+            <LanguageToggle lang={lang} setLang={handleSetLang} />
+          </div>
         </div>
       </header>
 
