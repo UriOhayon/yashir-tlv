@@ -3,3 +3,6 @@
 dist/
 .env*
 vercel-logs/
+
+# personal outreach file (not part of the site)
+restaurant-outreach.html
