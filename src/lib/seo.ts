@@ -91,6 +91,6 @@ export function itemListJsonLd(restaurants: Restaurant[], name: string) {
   };
 }
 
-export function feeLabel(fee: number): string {
-  return fee === 0 ? "חינם" : `₪${fee}`;
+export function feeLabel(fee?: number): string {
+  return fee == null ? "לא ידוע" : fee === 0 ? "חינם" : `₪${fee}`;
 }

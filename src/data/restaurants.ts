@@ -478,9 +478,6 @@ export const restaurants: Restaurant[] = [
     neighborhood: "Yad Eliyahu",
     website: "https://tabitisrael.co.il/site/taqueria-delivery",
     orderingPlatform: "tabit",
-    deliveryRadiusKm: 5,
-    minOrderILS: 80,
-    deliveryFeeILS: 15,
     estimatedDeliveryMin: 30,
     operatingHours: "Sun–Sat 11:30–00:00",
     schedule: {

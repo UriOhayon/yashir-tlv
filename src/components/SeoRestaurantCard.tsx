@@ -44,10 +44,10 @@ export default function SeoRestaurantCard({ r }: { r: Restaurant }) {
       )}
 
       <dl className="mt-3 grid grid-cols-2 gap-x-3 gap-y-1 text-xs" style={{ color: "var(--muted)" }}>
-        <div className="flex justify-between"><dt>מינימום</dt><dd style={{ color: "var(--ink)" }}>₪{r.minOrderILS}</dd></div>
+        <div className="flex justify-between"><dt>מינימום</dt><dd style={{ color: "var(--ink)" }}>{r.minOrderILS != null ? `₪${r.minOrderILS}` : "לא ידוע"}</dd></div>
         <div className="flex justify-between"><dt>משלוח</dt><dd style={{ color: "var(--ink)" }}>{feeLabel(r.deliveryFeeILS)}</dd></div>
         <div className="flex justify-between"><dt>זמן</dt><dd style={{ color: "var(--ink)" }}>~{r.estimatedDeliveryMin} דק׳</dd></div>
-        <div className="flex justify-between"><dt>רדיוס</dt><dd style={{ color: "var(--ink)" }}>{r.deliveryRadiusKm} ק״מ</dd></div>
+        <div className="flex justify-between"><dt>רדיוס</dt><dd style={{ color: "var(--ink)" }}>{r.deliveryRadiusKm != null ? `${r.deliveryRadiusKm} ק״מ` : "לא ידוע"}</dd></div>
       </dl>
 
       <div className="mt-3 flex items-center justify-between">

@@ -30,7 +30,7 @@ export async function generateMetadata({
   const r = get(id);
   if (!r) return {};
   const title = `${r.nameHe} - משלוח ישיר ב${r.neighborhood} | ישיר`;
-  const description = `הזמינו ישירות מ${r.nameHe} (${cuisineHe[r.cuisineType]}) ב${r.neighborhood}, תל אביב. מינימום ₪${r.minOrderILS}, משלוח ${feeLabel(r.deliveryFeeILS)}, כ-${r.estimatedDeliveryMin} דק׳. הזמנה ישירה מהאתר של המסעדה - בלי אפליקציות ובלי מתווכים.`;
+  const description = `הזמינו ישירות מ${r.nameHe} (${cuisineHe[r.cuisineType]}) ב${r.neighborhood}, תל אביב. מינימום ${r.minOrderILS != null ? `₪${r.minOrderILS}` : "לא ידוע"}, משלוח ${feeLabel(r.deliveryFeeILS)}, כ-${r.estimatedDeliveryMin} דק׳. הזמנה ישירה מהאתר של המסעדה - בלי אפליקציות ובלי מתווכים.`;
   const url = `${BASE_URL}/restaurant/${r.id}`;
   return {
     title,
@@ -111,10 +111,10 @@ export default async function RestaurantPage({
         )}
 
         <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4">
-          <Fact label="מינימום הזמנה" value={`₪${r.minOrderILS}`} />
+          <Fact label="מינימום הזמנה" value={r.minOrderILS != null ? `₪${r.minOrderILS}` : "לא ידוע"} />
           <Fact label="דמי משלוח" value={feeLabel(r.deliveryFeeILS)} />
           <Fact label="זמן משוער" value={`~${r.estimatedDeliveryMin} דק׳`} />
-          <Fact label="רדיוס משלוח" value={`${r.deliveryRadiusKm} ק״מ`} />
+          <Fact label="רדיוס משלוח" value={r.deliveryRadiusKm != null ? `${r.deliveryRadiusKm} ק״מ` : "לא ידוע"} />
         </div>
 
         {r.couponCode && (

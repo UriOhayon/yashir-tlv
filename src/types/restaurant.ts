@@ -43,9 +43,9 @@ export interface Restaurant {
   neighborhood: string;
   website?: string;
   orderingPlatform: OrderingPlatform;
-  deliveryRadiusKm: number;
-  minOrderILS: number;
-  deliveryFeeILS: number;
+  deliveryRadiusKm?: number;
+  minOrderILS?: number;
+  deliveryFeeILS?: number;
   estimatedDeliveryMin: number;
   operatingHours: string;
   schedule: WeeklySchedule;

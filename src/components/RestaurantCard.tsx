@@ -118,12 +118,12 @@ export default function RestaurantCard({ restaurant: r, lang, t }: Props) {
         className="grid grid-cols-2 gap-px"
         style={{ backgroundColor: "var(--border)", borderTop: "1px solid var(--border)" }}
       >
-        <Stat icon={<MapPin size={12} />} label={t.radius} value={`${r.deliveryRadiusKm} km`} />
-        <Stat icon={<ShoppingBag size={12} />} label={t.minOrder} value={`₪${r.minOrderILS}`} />
+        <Stat icon={<MapPin size={12} />} label={t.radius} value={r.deliveryRadiusKm != null ? `${r.deliveryRadiusKm} km` : "לא ידוע"} />
+        <Stat icon={<ShoppingBag size={12} />} label={t.minOrder} value={r.minOrderILS != null ? `₪${r.minOrderILS}` : "לא ידוע"} />
         <Stat
           icon={<Truck size={12} />}
           label={t.deliveryFee}
-          value={r.deliveryFeeILS === 0 ? "Free" : `₪${r.deliveryFeeILS}`}
+          value={r.deliveryFeeILS == null ? "לא ידוע" : r.deliveryFeeILS === 0 ? "Free" : `₪${r.deliveryFeeILS}`}
         />
         <Stat icon={<Clock size={12} />} label={t.eta} value={`~${r.estimatedDeliveryMin}m`} />
       </div>

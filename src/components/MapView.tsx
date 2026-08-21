@@ -52,7 +52,7 @@ export default function MapView({ restaurants, t, lang }: Props) {
           <div key={r.id}>
             <Circle
               center={[r.lat!, r.lng!]}
-              radius={r.deliveryRadiusKm * 1000}
+              radius={(r.deliveryRadiusKm ?? 0) * 1000}
               pathOptions={{
                 color: "#15803d",
                 fillColor: "#15803d",
